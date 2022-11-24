@@ -48,3 +48,6 @@ dependencies:
   - pip
   - pip:
       - jupyter-syncthing-proxy==1.0.3
+
+      # Access linux desktop from inside JupyterHub
+      - jupyter-desktop-server
