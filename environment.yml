@@ -22,7 +22,7 @@ dependencies:
 
   # Cloud access tools and libraries
   # Access S3 easily from python
-  - s3f
+  - s3fs
   # handle login and similar details for accessing earthdata protected data
   # https://github.com/nsidc/earthaccess
   - earthdata
