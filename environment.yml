@@ -28,17 +28,68 @@ dependencies:
   - earthdata
   # Access datasets exposed via STAC
   - pystac-client
+  # Access datasets exposed via intake catalogs
+  - intake
+  - intake-esm
+  - intake-xarray
+
+  # Core scientific python stack
+  - numpy
+  - scipy
+  - matplotlib
+  - pandas
+  - networkx
+  - scikit-image
+  - scikit-learn
+  - sympy
+  - statsmodels
+  - xarray
+  - hypothesis # needed by numpy testing tools
+  - cython  # optimization, C API access
+  - numba  # high-performance numerics
+
+  # Jupyter tools
+  - ipython
+  - ipywidgets
+  - jupyterlab-favorites
+  - jupyterlab-geojson
+  - jupyterlab-git
+  - jupyter-book
+  - nbconvert
+  - nbdime
 
   # Visualization packages
-  - matplotlib
+  - cartopy # geospatial plotting with matplotlib
+  - seaborn  # statistical plotting with matplotlib
   - ipympl # This enables matplotlib interaction with jupyter widgets
   - ipyleaflet
+  - bokeh
+  - plotly
 
   # Geospatial data packages
+  - geopandas
   - rasterio
   - rioxarray
   - xarray-datatree
 
+  # File formats and file management, download, dataset caching
+  - h5py
+  - hdf5
+  - h5netcdf
+  - pooch
+
+  # Distributed computing
+  - dask
+  - dask-labextension
+
+  # Other useful generic python packages
+  - pillow # Python imaging library, useful for many image-related tasks
+  - tqdm  # progress bars, with notebook support
+  - pytest
+  - pytest-cov
+  - pep8
+  - flake8
+  
   # Packages specific to cryo work
   - icepyx
 
