@@ -1,3 +1,5 @@
+name: cryointhecloud
+
 channels:
   - conda-forge
 
@@ -92,6 +94,9 @@ dependencies:
   
   # Packages specific to cryo work
   - icepyx
+
+  # Desktop tools whose versions are more recent on conda-forge than ubuntu
+  - qgis
 
   # Not all packages will be available from conda-forge, we install from pip when we need to.
   - pip
