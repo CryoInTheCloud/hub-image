@@ -21,7 +21,8 @@ dependencies:
   # https://blog.jupyter.org/securely-pushing-to-github-from-a-jupyterhub-3ee42dfdc54f has
   # some more information
   - gh-scoped-creds==4.1
-
+  # needed for Linux desktop to work
+  - websockify>=0.10
   # Cloud access tools and libraries
   # Access S3 easily from python
   - s3fs==2022.11.0
