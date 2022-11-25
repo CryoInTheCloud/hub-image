@@ -1,0 +1,7 @@
+# GitHub Actions Continuous Integration workflows
+
+- binder.yaml - Adds a Binder badge to Pull Requests that are newly opened
+- build.yaml - Build and push docker container images to a docker registry
+- conda-lock-command.yml - Refresh conda-lock files by writing `/condalock` in a Pull Request comment
+- slash-command-dispatch.yml - ChatOps that looks for slash commands in Pull Requests to trigger automated scripts
+- test.yaml - Test building docker container images in a Pull Request
