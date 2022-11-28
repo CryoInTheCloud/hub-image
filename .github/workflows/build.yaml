@@ -33,8 +33,7 @@ jobs:
         # Disable pushing a 'latest' tag, as this often just causes confusion
         LATEST_TAG_OFF: true
 
-        # Uncomment and modify the following line with your image name, otherwise no push will happen
-        # IMAGE_NAME: "<quay-username>/<repository-name>"
+        IMAGE_NAME: "cryointhecloud/cryo-hub-image"
 
     # Lets us monitor disks getting full as images get bigger over time
     - name: Show how much disk space is left
