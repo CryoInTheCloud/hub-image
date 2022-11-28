@@ -111,6 +111,6 @@ dependencies:
   # Not all packages will be available from conda-forge, we install from pip when we need to.
   - pip==22.3.1
   - pip:
-    - jupyter-syncthing-proxy
+    - jupyter-syncthing-proxy==1.0.3
     # Access linux desktop from inside JupyterHub
-    - jupyter-desktop-server
+    - jupyter-desktop-server==0.1.3
