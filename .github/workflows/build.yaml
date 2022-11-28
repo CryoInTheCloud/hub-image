@@ -32,7 +32,6 @@ jobs:
         DOCKER_REGISTRY: "quay.io"
         # Disable pushing a 'latest' tag, as this often just causes confusion
         LATEST_TAG_OFF: true
-
         IMAGE_NAME: "cryointhecloud/cryo-hub-image"
 
     # Lets us monitor disks getting full as images get bigger over time
