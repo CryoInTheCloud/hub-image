@@ -1,8 +1,10 @@
 # CryoInTheCloud JupyterHub user image
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/CryoInTheCloud/hub-image/HEAD)
+[![Build and push container image](https://github.com/CryoInTheCloud/hub-image/actions/workflows/build.yaml/badge.svg)](https://github.com/CryoInTheCloud/hub-image/actions/workflows/build.yaml)
 
-The JupyterHub image used for [hub.cryointhecloud.com](https://cryointhecloud.com).
+The JupyterHub docker image used for [hub.cryointhecloud.com](https://cryointhecloud.com),
+hosted on https://quay.io/repository/cryointhecloud/cryo-hub-image
 
 ## Adding packages to this repository
 
