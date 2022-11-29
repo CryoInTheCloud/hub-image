@@ -1,4 +1,4 @@
 #!/bin/bash
-set -eux
-pip install conda-lock==1.2.1
+set -euxo pipefail
+pip install --no-cache conda-lock==1.2.1
 conda-lock install --mamba --name notebook conda-lock.yml
