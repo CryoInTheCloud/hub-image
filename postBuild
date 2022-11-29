@@ -1,4 +1,4 @@
 #!/bin/bash
 set -eux
 pip install conda-lock==1.2.1
-conda-lock install --mamba --name cryocloud --file conda-lock.yml
+conda-lock install --mamba --name cryocloud conda-lock.yml
