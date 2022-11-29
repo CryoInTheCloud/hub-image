@@ -107,7 +107,7 @@ dependencies:
   - icepyx==0.6.4
 
   # Desktop tools whose versions are more recent on conda-forge than ubuntu
-  - qgis==3.18.3
+  - qgis==3.22.11
 
   # Not all packages will be available from conda-forge, we install from pip when we need to.
   - pip==22.3.1
