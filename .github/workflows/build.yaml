@@ -8,6 +8,8 @@ on:
       - 'apt.txt'
       - 'conda-linux-64.lock'
       - 'environment-cryocloud.yml'
+      - 'postBuild'
+      - 'start'
 
 jobs:
   build-and-push:
