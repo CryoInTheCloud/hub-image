@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'apt.txt'
+      - 'conda-linux-64.lock'
+      - 'environment.yml'
 
 jobs:
   build-and-push:

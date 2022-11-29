@@ -2,6 +2,10 @@ name: Test container image build
 
 on:
   pull_request:
+    paths:
+      - 'apt.txt'
+      - 'conda-linux-64.lock'
+      - 'environment.yml'
 
 jobs:
   test-build:
