@@ -9,7 +9,7 @@ hosted on https://quay.io/repository/cryointhecloud/cryo-hub-image
 ## Adding packages to this repository
 
 You can easily add more packages to the cryointhecloud hub by making pull requests to this
-repository. Edit either the `environment.yml` file (for most packages) or `apt.txt` file
+repository. Edit either the `environment-cryocloud.yml` file (for most packages) or `apt.txt` file
 (for packages that need to be used in the Linux Desktop environment in the cloud), and make
 a pull request - you can even do that just from the GitHub UI! A bot will comment with a link to
 [mybinder.org](https://mybinder.org) where you can test your pull request to make sure  it works

@@ -5,7 +5,7 @@ on:
     paths:
       - 'apt.txt'
       - 'conda-linux-64.lock'
-      - 'environment.yml'
+      - 'environment-cryocloud.yml'
 
 jobs:
   test-build:
