@@ -47,7 +47,7 @@ jobs:
       # Run "conda-lock" for linux-64 only
       - name: Run conda-lock
         run: |
-          conda-lock lock --mamba --kind explicit --file environment-cryocloud.yml --platform linux-64
+          conda-lock lock --mamba --file environment-cryocloud.yml --platform linux-64
 
       # Commit the change to the PR branch if any changes
       - name: Commit condalock files to PR
