@@ -42,7 +42,7 @@ jobs:
 
       # Install conda-lock library
       - name: Install conda-lock
-        run: pip install conda-lock[pip_support]==1.0.5
+        run: pip install conda-lock==1.2.1
 
       # Run "conda-lock" for linux-64 only
       - name: Run conda-lock
