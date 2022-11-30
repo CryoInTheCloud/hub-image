@@ -6,6 +6,8 @@ on:
       - 'apt.txt'
       - 'conda-linux-64.lock'
       - 'environment.yml'
+      - 'postBuild'
+      - 'start'
 
 jobs:
   test-build:

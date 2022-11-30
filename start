@@ -1,0 +1,16 @@
+#!/bin/bash
+set -euo pipefail
+
+mkdir -p $HOME/Desktop
+
+# Copy any .desktop files to the desktop
+cp $REPO_DIR/*.desktop $HOME/Desktop/
+
+# Set any environment variables here
+# These are inherited by all processes, *except* RStudio
+
+# Tell applications where to open desktop apps - this allows notebooks to
+# pop open GUIs
+export DISPLAY: ":1.0"
+
+exec "$@"

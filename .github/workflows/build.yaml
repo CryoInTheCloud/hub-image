@@ -8,6 +8,8 @@ on:
       - 'apt.txt'
       - 'conda-linux-64.lock'
       - 'environment.yml'
+      - 'start'
+      - 'postBuild'
 
 jobs:
   build-and-push:
