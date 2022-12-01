@@ -8,6 +8,9 @@ on:
       - 'environment.yml'
       - 'postBuild'
       - 'start'
+      # Trigger rebuilds if the test process changes
+      - '.github/workflows/test.yaml'
+
 
 jobs:
   test-build:

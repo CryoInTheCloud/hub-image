@@ -10,6 +10,9 @@ on:
       - 'environment.yml'
       - 'start'
       - 'postBuild'
+      # Trigger rebuilds if the build process changes
+      - '.github/workflows/build.yaml'
+
 
 jobs:
   build-and-push:
