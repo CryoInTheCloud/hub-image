@@ -11,6 +11,6 @@ cp $REPO_DIR/*.desktop $HOME/Desktop/
 
 # Tell applications where to open desktop apps - this allows notebooks to
 # pop open GUIs
-export DISPLAY: ":1.0"
+export DISPLAY=":1.0"
 
 exec "$@"
