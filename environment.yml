@@ -36,6 +36,7 @@ dependencies:
   - intake==0.6.6
   - intake-esm==2022.9.18
   - intake-xarray==0.6.1
+  - intake-stac==0.4.0
 
   # Core scientific python stack
   - numpy==1.23.5
