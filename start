@@ -15,7 +15,7 @@ export DISPLAY=":1.0"
 
 # Tell gh-scoped-creds which GitHub app to use for push access
 # See https://github.com/jupyterhub/gh-scoped-creds#github-app-configuration
-export GH_SCOPED_CREDS_CLIENT_ID="Iv1.7fc8f5dd854835fc"
-export GH_SCOPED_CREDS_APP_URL="https://github.com/apps/cryocloud-github-push-access"
+export GH_SCOPED_CREDS_CLIENT_ID="Iv1.bd27058fd393e285"
+export GH_SCOPED_CREDS_APP_URL="https://github.com/apps/cryocloud-github-access"
 
 exec "$@"
