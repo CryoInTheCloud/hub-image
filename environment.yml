@@ -16,7 +16,8 @@ dependencies:
   # This provides memory usage stats on JupyterLab and classic notebook
   - jupyter-resource-usage==0.6.4
   # https://syncthing.net/ provides a dropbox-like interface for syncing directories across users,
-  # hubs and machines. Used along with `jupyter-syncthing-proxy` from pip.
+  # hubs and machines. Used along with `jupyter-syncthing-proxy`.
+  - jupyter-syncthing-proxy==1.0.3
   - syncthing==1.22.1
   # gh-scoped-creds allows users to securely push to GitHub from their repo.
   # https://blog.jupyter.org/securely-pushing-to-github-from-a-jupyterhub-3ee42dfdc54f has
@@ -116,6 +117,5 @@ dependencies:
   # Not all packages will be available from conda-forge, we install from pip when we need to.
   - pip==22.3.1
   - pip:
-    - jupyter-syncthing-proxy==1.0.3
     # Access linux desktop from inside JupyterHub
     - jupyter-desktop-server==0.1.3
