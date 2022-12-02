@@ -110,6 +110,8 @@ dependencies:
 
   # Desktop tools whose versions are more recent on conda-forge than ubuntu
   - qgis==3.22.11
+  # Maybe needed for qgis? https://github.com/conda-forge/qgis-feedstock/issues/263
+  - pyopencl
 
   # Not all packages will be available from conda-forge, we install from pip when we need to.
   - pip==22.3.1
