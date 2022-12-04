@@ -1,4 +1,12 @@
-#!/bin/bash
-set -euxo pipefail
+#!/bin/bash -l
+set -euo pipefail
+
+# Put our custom Jupyter Server config into appropriate platform
+# This path is determined by looking at output of `jupyter --path` in the hub
+# We copy both to notebook server config and jupyter server config, because either can be
+# used in the JupyterHub.
+cp custom_jupyter_server_config.json ${NB_PYTHON_PREFIX}/etc/jupyter/jupyter_server_config.d/
+cp custom_jupyter_server_config.json ${NB_PYTHON_PREFIX}/etc/jupyter/jupyter_notebook_config.d/
+
 pip install --no-cache conda-lock==1.2.1
 conda-lock install --mamba --name notebook conda-lock.yml

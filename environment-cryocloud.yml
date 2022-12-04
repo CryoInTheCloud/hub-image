@@ -16,7 +16,8 @@ dependencies:
   # This provides memory usage stats on JupyterLab and classic notebook
   - jupyter-resource-usage==0.6.4
   # https://syncthing.net/ provides a dropbox-like interface for syncing directories across users,
-  # hubs and machines. Used along with `jupyter-syncthing-proxy` from pip.
+  # hubs and machines. Used along with `jupyter-syncthing-proxy`.
+  - jupyter-syncthing-proxy==1.0.3
   - syncthing==1.22.1
   # gh-scoped-creds allows users to securely push to GitHub from their repo.
   # https://blog.jupyter.org/securely-pushing-to-github-from-a-jupyterhub-3ee42dfdc54f has
@@ -36,6 +37,7 @@ dependencies:
   - intake==0.6.6
   - intake-esm==2022.9.18
   - intake-xarray==0.6.1
+  - intake-stac==0.4.0
 
   # Core scientific python stack
   - numpy==1.23.5
@@ -109,10 +111,11 @@ dependencies:
 
   # Desktop tools whose versions are more recent on conda-forge than ubuntu
   - qgis==3.22.11
+  # Maybe needed for qgis? https://github.com/conda-forge/qgis-feedstock/issues/263
+  - pyopencl
 
   # Not all packages will be available from conda-forge, we install from pip when we need to.
   - pip==22.3.1
   - pip:
-    - jupyter-syncthing-proxy==1.0.3
     # Access linux desktop from inside JupyterHub
     - jupyter-desktop-server==0.1.3

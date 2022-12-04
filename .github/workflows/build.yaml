@@ -9,7 +9,9 @@ on:
       - 'conda-linux.yml'
       - 'environment-cryocloud.yml'
       - 'postBuild'
-      - 'start'
+      # Trigger rebuilds if the build process changes
+      - '.github/workflows/build.yaml'
+
 
 jobs:
   build-and-push:
@@ -39,6 +41,8 @@ jobs:
         # Disable pushing a 'latest' tag, as this often just causes confusion
         LATEST_TAG_OFF: true
         IMAGE_NAME: "cryointhecloud/cryo-hub-image"
+        # Put repo contents in /srv/repo, so they aren't mangled when we put user home in /home/jovyan
+        REPO_DIR: /srv/repo
 
     # Lets us monitor disks getting full as images get bigger over time
     - name: Show how much disk space is left

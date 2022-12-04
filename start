@@ -11,6 +11,11 @@ cp $REPO_DIR/*.desktop $HOME/Desktop/
 
 # Tell applications where to open desktop apps - this allows notebooks to
 # pop open GUIs
-export DISPLAY: ":1.0"
+export DISPLAY=":1.0"
+
+# Tell gh-scoped-creds which GitHub app to use for push access
+# See https://github.com/jupyterhub/gh-scoped-creds#github-app-configuration
+export GH_SCOPED_CREDS_CLIENT_ID="Iv1.bd27058fd393e285"
+export GH_SCOPED_CREDS_APP_URL="https://github.com/apps/cryocloud-github-access"
 
 exec "$@"
