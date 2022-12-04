@@ -9,6 +9,7 @@ on:
       - 'conda-linux.yml'
       - 'environment-cryocloud.yml'
       - 'postBuild'
+      - 'start'
       # Trigger rebuilds if the build process changes
       - '.github/workflows/build.yaml'
 
