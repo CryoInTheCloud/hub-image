@@ -6,14 +6,22 @@
 The JupyterHub docker image used for [hub.cryointhecloud.com](https://cryointhecloud.com),
 hosted on https://quay.io/repository/cryointhecloud/cryo-hub-image
 
-## Adding packages to this repository
+## Updating packages in this repository
 
-You can easily add more packages to the cryointhecloud hub by making pull requests to this
-repository. Edit either the `environment.yml` file (for most packages) or `apt.txt` file
-(for packages that need to be used in the Linux Desktop environment in the cloud), and make
-a pull request - you can even do that just from the GitHub UI! A bot will comment with a link to
-[mybinder.org](https://mybinder.org) where you can test your pull request to make sure  it works
-as you would expect.
+You can add or update packages on the cryointhecloud hub by making pull requests to this
+repository. Follow these steps:
+
+1. Edit either the [`environment.yml`](https://github.com/CryoInTheCloud/hub-image/edit/main/environment.yml)
+   file (for most packages) or [`apt.txt`](https://github.com/CryoInTheCloud/hub-image/edit/main/apt.txt)
+   file (for packages that need to be used in the Linux Desktop environment in the cloud).
+2. Start a [pull request](https://github.com/CryoInTheCloud/hub-image/pulls) -
+   you can even do that just from the GitHub UI! A bot will comment with a link to
+   [mybinder.org](https://mybinder.org) where you can test your pull request to make sure it works
+   as you would expect.
+3. In the Pull Request, write a comment with the slash command `/condalock`.
+   This will refresh the [`conda-lock.yml`](https://conda-incubator.github.io/conda-lock/output/#unified-lockfile)
+   file that contains a snapshot of the exact library versions contained in the
+   conda environment, which will be useful for reproducibility.
 
 ## Updating the CryoCloud JupyterHub to use a new image
 
