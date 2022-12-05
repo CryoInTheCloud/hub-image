@@ -41,15 +41,10 @@ jobs:
         password: ${{ secrets.QUAY_PASSWORD }}
 
     - name: Pull Image for Corresponding GitHub Commit
-      run: |
-        docker pull quay.io/cryointhecloud/cryo-hub-image:${SHA12}
+      run: docker pull quay.io/cryointhecloud/cryo-hub-image:${SHA12}
 
     - name: Retag Images
-      run: |
-        docker tag cryointhecloud/cryo-hub-image:${SHA12} quay.io/cryointhecloud/cryo-hub-image:latest
-        docker tag cryointhecloud/cryo-hub-image:${SHA12} quay.io/cryointhecloud/cryo-hub-image:${TAG}
+      run: docker tag cryointhecloud/cryo-hub-image:${SHA12} quay.io/cryointhecloud/cryo-hub-image:${TAG}
 
     - name: Push Tags To Quay.io
-      run: |
-        docker push quay.io/cryointhecloud/cryo-hub-image:latest
-        docker push quay.io/cryointhecloud/cryo-hub-image:${TAG}
+      run: docker push quay.io/cryointhecloud/cryo-hub-image:${TAG}
