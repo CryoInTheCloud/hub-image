@@ -66,12 +66,12 @@ https://conda.anaconda.org/conda-forge/linux-64/libwebp-base-1.2.4-h166bdaf_0.ta
 https://conda.anaconda.org/conda-forge/linux-64/libzlib-1.2.13-h166bdaf_4.tar.bz2#f3f9de449d32ca9b9c66a22863c96f41
 https://conda.anaconda.org/conda-forge/linux-64/libzopfli-1.0.3-h9c3ff4c_0.tar.bz2#c66fe2d123249af7651ebde8984c51c2
 https://conda.anaconda.org/conda-forge/linux-64/lz4-c-1.9.3-h9c3ff4c_1.tar.bz2#fbe97e8fa6f275d7c76a09e795adc3e6
-https://conda.anaconda.org/conda-forge/linux-64/mpg123-1.30.2-h27087fc_1.tar.bz2#2fe2a839394ef3a1825a5e5e296060bc
+https://conda.anaconda.org/conda-forge/linux-64/mpg123-1.31.1-h27087fc_0.tar.bz2#0af513b75f78a701a152568a31303bdf
 https://conda.anaconda.org/conda-forge/linux-64/ncurses-6.3-h27087fc_1.tar.bz2#4acfc691e64342b9dae57cf2adc63238
 https://conda.anaconda.org/conda-forge/linux-64/nitro-2.7.dev6-h27087fc_5.tar.bz2#18a745069e7057a03c747e7ff87107a9
 https://conda.anaconda.org/conda-forge/linux-64/nspr-4.35-h27087fc_0.conda#da0ec11a6454ae19bff5b02ed881a2b1
 https://conda.anaconda.org/conda-forge/linux-64/ocl-icd-2.3.1-h7f98852_0.tar.bz2#a9b00e3aa7ecf158ed8e34ef91915f16
-https://conda.anaconda.org/conda-forge/linux-64/openssl-1.1.1s-h166bdaf_0.tar.bz2#e17553617ce05787d97715177be014d1
+https://conda.anaconda.org/conda-forge/linux-64/openssl-1.1.1s-h0b41bf4_1.conda#c5405eccf20334e57a80c1c3a9e68266
 https://conda.anaconda.org/conda-forge/linux-64/pcre-8.45-h9c3ff4c_0.tar.bz2#c05d1820a6d34ff07aaaab7a9b7eddaa
 https://conda.anaconda.org/conda-forge/linux-64/pixman-0.40.0-h36c2ea0_0.tar.bz2#660e72c82f2e75a6b3fe6a6e75c79f19
 https://conda.anaconda.org/conda-forge/linux-64/pthread-stubs-0.4-h36c2ea0_1001.tar.bz2#22dad4df6e8630e8dff2428f6f6a7036
@@ -132,7 +132,7 @@ https://conda.anaconda.org/conda-forge/linux-64/libgcrypt-1.10.1-h166bdaf_0.tar.
 https://conda.anaconda.org/conda-forge/linux-64/libglib-2.74.1-h606061b_1.tar.bz2#ed5349aa96776e00b34eccecf4a948fe
 https://conda.anaconda.org/conda-forge/linux-64/liblapack-3.9.0-16_linux64_openblas.tar.bz2#955d993f41f9354bf753d29864ea20ad
 https://conda.anaconda.org/conda-forge/linux-64/libllvm15-15.0.6-h63197d8_0.conda#201168ef66095bbd565e124ee2c56a20
-https://conda.anaconda.org/conda-forge/linux-64/libsndfile-1.1.0-h27087fc_0.tar.bz2#02fa0b56a57c8421d1195bf0c021e682
+https://conda.anaconda.org/conda-forge/linux-64/libsndfile-1.1.0-hcb278e6_1.conda#d7a07b1f5974bce4735112aaef0c1467
 https://conda.anaconda.org/conda-forge/linux-64/libtiff-4.4.0-h55922b4_4.tar.bz2#901791f0ec7cddc8714e76e273013a91
 https://conda.anaconda.org/conda-forge/linux-64/libxkbcommon-1.0.3-he3ba5ed_0.tar.bz2#f9dbabc7e01c459ed7a1d1d64b206e9b
 https://conda.anaconda.org/conda-forge/linux-64/libxslt-1.1.37-h873f0b0_0.tar.bz2#ed0d77d947ddeb974892de8df7224d12
