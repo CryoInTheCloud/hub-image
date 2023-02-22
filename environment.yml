@@ -108,7 +108,7 @@ dependencies:
   - icepyx==0.6.4
 
   # Desktop tools whose versions are more recent on conda-forge than ubuntu
-  - qgis==3.22.11
+  - qgis==3.28.2
   # Maybe needed for qgis? https://github.com/conda-forge/qgis-feedstock/issues/263
   - pyopencl
   # needed for Linux desktop to work
