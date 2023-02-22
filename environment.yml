@@ -68,7 +68,7 @@ dependencies:
 
   # Geospatial data packages
   - geopandas==0.12.1
-  - rasterio==1.3.3
+  - rasterio==1.3.4
   - rioxarray==0.13.1
   - xarray-datatree==0.0.9
 
