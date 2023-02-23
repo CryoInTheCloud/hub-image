@@ -14,7 +14,7 @@ dependencies:
   # jupyterlab version
   - jupyterlab>=3.0,<4.0
   # This provides memory usage stats on JupyterLab and classic notebook
-  - jupyter-resource-usage==0.6.4
+  - jupyter-resource-usage==0.7.1
   # https://syncthing.net/ provides a dropbox-like interface for syncing directories across users,
   # hubs and machines. Used along with `jupyter-syncthing-proxy`.
   - jupyter-syncthing-proxy==1.0.3
@@ -35,8 +35,9 @@ dependencies:
   - ipywidgets==7.7.2
   - jupyterlab-favorites==3.1.0
   - jupyterlab-geojson==3.3.1
-  - jupyterlab-git==0.39.3
-  - jupyter-book==0.13.1
+  - jupyterlab-git==0.41.0
+  - jupyterlab-myst==1.1.0
+  - jupyter-book==0.13.2
   - jupytext==1.14.1
   - nbconvert==6.5.3
   - nbdime==3.1.1
