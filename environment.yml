@@ -114,6 +114,9 @@ dependencies:
   - pyopencl
   # needed for Linux desktop to work
   - websockify>=0.10
+  # Includes new subcommands (`switch` & `restore`) and vulnerability fixes
+  # over the version available via ubuntu sources
+  - git ~=2.39
 
   # Not all packages will be available from conda-forge, we install from pip when we need to.
   - pip==22.3.1
