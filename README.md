@@ -6,6 +6,11 @@
 The JupyterHub docker image used for [hub.cryointhecloud.com](https://cryointhecloud.com),
 hosted on https://quay.io/repository/cryointhecloud/cryo-hub-image
 
+The image is built with [repo2docker](https://repo2docker.readthedocs.io), which uses
+Ubuntu Bionic Beaver (18.04) as the base image. If you'd like to run a test build
+locally, please read the [repo2docker Getting Started
+doc](https://repo2docker.readthedocs.io/en/latest/getting-started/index.html).
+
 ## Updating packages in this repository
 
 You can add or update packages on the cryointhecloud hub by making pull requests to this
