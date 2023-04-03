@@ -112,6 +112,8 @@ dependencies:
   - qgis==3.28.2
   # Maybe needed for qgis? https://github.com/conda-forge/qgis-feedstock/issues/263
   - pyopencl
+  # Resolves warning "No ICDs were found": https://github.com/CryoInTheCloud/hub-image/issues/50
+  - ocl-icd-system
   # needed for Linux desktop to work
   - websockify>=0.10
   # Includes new subcommands (`switch` & `restore`) and vulnerability fixes
