@@ -1,11 +1,6 @@
 #!/bin/bash
 set -euo pipefail
 
-mkdir -p $HOME/Desktop
-
-# Copy any .desktop files to the desktop
-cp $REPO_DIR/*.desktop $HOME/Desktop/
-
 # Set any environment variables here
 # These are inherited by all processes, *except* RStudio
 

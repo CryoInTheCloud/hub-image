@@ -8,7 +8,28 @@ set -euo pipefail
 cp custom_jupyter_server_config.json ${NB_PYTHON_PREFIX}/etc/jupyter/jupyter_server_config.d/
 cp custom_jupyter_server_config.json ${NB_PYTHON_PREFIX}/etc/jupyter/jupyter_notebook_config.d/
 
-# Associate .qgs files with QGIS desktop application
-MIME_PACKAGE_DIR=~/.local/share/mime/packages
-mkdir -p ${MIME_PACKAGE_DIR}
-wget https://raw.githubusercontent.com/qgis/QGIS/ltr-3_28/debian/qgis.xml -O ${MIME_PACKAGE_DIR}/qgis.xml
+
+# Add QGIS Mime Type data
+MIME_DIR="${HOME}/.local/share/mime"
+MIME_PACKAGE_DIR="${MIME_DIR}/packages"
+QGIS_MIME_DEFS_URL="https://raw.githubusercontent.com/qgis/QGIS/ltr-3_28/debian/qgis.xml"
+mkdir -p "${MIME_PACKAGE_DIR}"
+wget "${QGIS_MIME_DEFS_URL}" -O "${MIME_PACKAGE_DIR}/qgis.xml"
+
+# Update the MIME database with the new QGIS types
+update-mime-database "${MIME_DIR}"
+
+
+# Add any .desktop files to the user's application database and to the desktop
+APPLICATIONS_DIR="${HOME}/.local/share/applications"
+DESKTOP_DIR="${HOME}/Desktop"
+mkdir -p "${APPLICATIONS_DIR}"
+mkdir -p "${DESKTOP_DIR}"
+for desktop_file_path in *.desktop; do
+    desktop_file_name="$(basename ${desktop_file_path})"
+    cp "${desktop_file_path}" "${APPLICATIONS_DIR}/."
+    ln -s "${APPLICATIONS_DIR}/${desktop_file_name}" "${DESKTOP_DIR}/${desktop_file_name}"
+done
+
+# Update the application database with the new desktop entries
+update-desktop-database "${APPLICATIONS_DIR}"
