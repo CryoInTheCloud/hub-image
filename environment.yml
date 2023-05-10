@@ -109,7 +109,7 @@ dependencies:
   - icepyx==0.7.0
 
   # Desktop tools whose versions are more recent on conda-forge than ubuntu
-  - qgis==3.28.2
+  - qgis==3.28.6
   # Maybe needed for qgis? https://github.com/conda-forge/qgis-feedstock/issues/263
   - pyopencl
   # Resolves warning "No ICDs were found": https://github.com/CryoInTheCloud/hub-image/issues/50
