@@ -7,3 +7,8 @@ set -euo pipefail
 # used in the JupyterHub.
 cp custom_jupyter_server_config.json ${NB_PYTHON_PREFIX}/etc/jupyter/jupyter_server_config.d/
 cp custom_jupyter_server_config.json ${NB_PYTHON_PREFIX}/etc/jupyter/jupyter_notebook_config.d/
+
+# Associate .qgs files with QGIS desktop application
+MIME_PACKAGE_DIR=~/.local/share/mime/packages
+mkdir -p ${MIME_PACKAGE_DIR}
+wget https://raw.githubusercontent.com/qgis/QGIS/ltr-3_28/debian/qgis.xml -O ${MIME_PACKAGE_DIR}/qgis.xml
