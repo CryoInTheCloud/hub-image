@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+<!-- From: https://raw.githubusercontent.com/qgis/QGIS/ltr-3_28/debian/qgis.xml -->
 <mime-info xmlns='http://www.freedesktop.org/standards/shared-mime-info'>
 
   <mime-type type="application/x-qgis-project">
