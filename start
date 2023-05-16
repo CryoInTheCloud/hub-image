@@ -13,7 +13,7 @@ export DISPLAY=":1.0"
 export GH_SCOPED_CREDS_CLIENT_ID="Iv1.bd27058fd393e285"
 export GH_SCOPED_CREDS_APP_URL="https://github.com/apps/cryocloud-github-access"
 
-# Copy any .desktop files to the application database and desktop. This is done
+# Add any .desktop files to the application database and desktop. This is done
 # at startup-time because it's expected that a remote filesystem will be
 # mounted at $HOME, which would overwrite the data if it was created at
 # build-time.
@@ -30,7 +30,7 @@ for desktop_file_path in ${REPO_DIR}/*.desktop; do
 done
 update-desktop-database "${APPLICATIONS_DIR}"
 
-# Add MIME Type data from XML files in `mime/` dir
+# Add MIME Type data from XML files in `mime/` dir to the MIME database.
 MIME_DIR="${HOME}/.local/share/mime"
 MIME_PACKAGES_DIR="${MIME_DIR}/packages"
 mkdir -p "${MIME_PACKAGES_DIR}"
