@@ -20,7 +20,7 @@ export GH_SCOPED_CREDS_APP_URL="https://github.com/apps/cryocloud-github-access"
 APPLICATIONS_DIR="${HOME}/.local/share/applications"
 DESKTOP_DIR="${HOME}/Desktop"
 mkdir -p "${APPLICATIONS_DIR}"
-mkdir "${DESKTOP_DIR}"
+mkdir -p "${DESKTOP_DIR}"
 for desktop_file_path in ${REPO_DIR}/*.desktop; do
     cp "${desktop_file_path}" "${APPLICATIONS_DIR}/."
 
