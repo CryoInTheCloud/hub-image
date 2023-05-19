@@ -1,0 +1,13 @@
+# Re-enable man pages disabled in Ubuntu 18 minimal image
+# https://wiki.ubuntu.com/Minimal
+USER root
+RUN yes | unminimize
+# NOTE: $NB_PYTHON_PREFIX is the same as $CONDA_PREFIX at run-time.
+# $CONDA_PREFIX isn't available in this context.
+# NOTE: Prepending ensures a working path; if $MANPATH was previously empty,
+# the trailing colon ensures that system paths are searched.
+ENV MANPATH="${NB_PYTHON_PREFIX}/share/man:${MANPATH}"
+RUN mandb
+
+# Revert to default user
+USER ${NB_USER}
