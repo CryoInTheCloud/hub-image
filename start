@@ -26,7 +26,7 @@ for desktop_file_path in ${REPO_DIR}/*.desktop; do
 
     # Symlink application to desktop
     desktop_file_name="$(basename ${desktop_file_path})"
-    ln -s "${APPLICATIONS_DIR}/${desktop_file_name}" "${DESKTOP_DIR}/${desktop_file_name}"
+    ln -sf "${APPLICATIONS_DIR}/${desktop_file_name}" "${DESKTOP_DIR}/${desktop_file_name}"
 done
 update-desktop-database "${APPLICATIONS_DIR}"
 
