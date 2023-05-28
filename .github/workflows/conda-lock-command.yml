@@ -41,8 +41,10 @@ jobs:
           python-version: '3.10'
 
       # Install conda-lock library
+      # HACK: Temporarily pin urllib3<2 to resolve incompatibilities:
+      #       https://github.com/ionrock/cachecontrol/issues/292
       - name: Install conda-lock
-        run: pip install conda-lock==1.2.1
+        run: 'pip install conda-lock "urllib3<2"'
 
       # Run "conda-lock" for linux-64 only
       - name: Run conda-lock
