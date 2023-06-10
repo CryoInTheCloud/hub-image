@@ -6,7 +6,7 @@ on:
       - main
     paths:
       - 'apt.txt'
-      - 'conda-linux.yml'
+      - 'conda-lock.yml'
       - 'environment-cryocloud.yml'
       - 'postBuild'
       - 'start'
