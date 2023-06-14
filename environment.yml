@@ -107,7 +107,7 @@ dependencies:
 
   # Packages specific to cryo work
   - icepyx==0.7.0
-  - sliderule==3.5.0
+  - sliderule~=3.5.0
 
   # Desktop tools whose versions are more recent on conda-forge than ubuntu
   - qgis~=3.28.6
