@@ -61,7 +61,7 @@ dependencies:
   - cartopy~=0.21.1 # geospatial plotting with matplotlib
   - geoviews==1.9.5
   - hvplot==0.8.2
-  - ipyleaflet==0.17.2
+  - ipyleaflet~=0.17.3
   - ipympl==0.9.2 # This enables matplotlib interaction with jupyter widgets
   - matplotlib==3.6.2
   - plotly==5.11.0
@@ -107,6 +107,7 @@ dependencies:
 
   # Packages specific to cryo work
   - icepyx==0.7.0
+  - sliderule~=3.5.0
 
   # Desktop tools whose versions are more recent on conda-forge than ubuntu
   - qgis~=3.28.6
