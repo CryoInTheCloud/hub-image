@@ -6,10 +6,10 @@ on:
       - main
     paths:
       - 'apt.txt'
-      - 'conda-linux-64.lock'
-      - 'environment.yml'
-      - 'start'
+      - 'conda-lock.yml'
+      - 'environment-cryocloud.yml'
       - 'postBuild'
+      - 'start'
       # Trigger rebuilds if the build process changes
       - '.github/workflows/build.yaml'
 

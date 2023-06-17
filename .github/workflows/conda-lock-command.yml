@@ -44,12 +44,12 @@ jobs:
       # HACK: Temporarily pin urllib3<2 to resolve incompatibilities:
       #       https://github.com/ionrock/cachecontrol/issues/292
       - name: Install conda-lock
-        run: 'pip install conda-lock "urllib3<2"'
+        run: 'pip install "conda-lock>=2.1.0" "urllib3<2"'
 
       # Run "conda-lock" for linux-64 only
       - name: Run conda-lock
         run: |
-          conda-lock lock --mamba --kind explicit --file environment.yml --platform linux-64
+          conda-lock lock --mamba --file environment-cryocloud.yml --platform linux-64
 
       # Commit the change to the PR branch if any changes
       - name: Commit condalock files to PR

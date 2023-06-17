@@ -4,8 +4,8 @@ on:
   pull_request:
     paths:
       - 'apt.txt'
-      - 'conda-linux-64.lock'
-      - 'environment.yml'
+      - 'conda-lock.yml'
+      - 'environment-cryocloud.yml'
       - 'postBuild'
       - 'start'
       # Trigger rebuilds if the test process changes

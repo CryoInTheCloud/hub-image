@@ -18,7 +18,7 @@ doc](https://repo2docker.readthedocs.io/en/latest/config_files.html#config-files
 You can add or update packages on the cryointhecloud hub by making pull requests to this
 repository. Follow these steps:
 
-1. Edit either the [`environment.yml`](https://github.com/CryoInTheCloud/hub-image/edit/main/environment.yml)
+1. Edit either the [`environment-cryocloud.yml`](https://github.com/CryoInTheCloud/hub-image/edit/main/environment-cryocloud.yml)
    file (for most packages) or [`apt.txt`](https://github.com/CryoInTheCloud/hub-image/edit/main/apt.txt)
    file (for packages that need to be used in the Linux Desktop environment in the cloud).
 2. Start a [pull request](https://github.com/CryoInTheCloud/hub-image/pulls) -
