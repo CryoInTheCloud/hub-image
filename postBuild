@@ -8,5 +8,5 @@ set -euo pipefail
 cp custom_jupyter_server_config.json ${NB_PYTHON_PREFIX}/etc/jupyter/jupyter_server_config.d/
 cp custom_jupyter_server_config.json ${NB_PYTHON_PREFIX}/etc/jupyter/jupyter_notebook_config.d/
 
-pip install --no-cache conda-lock>=2.0.0
+pip install --no-cache conda-lock>=2.1.0
 conda-lock install --mamba --name notebook conda-lock.yml
