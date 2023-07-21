@@ -36,7 +36,7 @@ dependencies:
   - jupyterlab-favorites==3.1.0
   - jupyterlab-geojson==3.3.1
   - jupyterlab-git==0.41.0
-  - jupyterlab-myst==1.1.0
+  - jupyterlab-myst~=2.0.1
   - jupyter-book==0.13.2
   - jupytext==1.14.1
   - nbconvert==6.5.3
