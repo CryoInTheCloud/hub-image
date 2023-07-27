@@ -96,6 +96,7 @@ dependencies:
   # Distributed computing
   - dask==2022.11.0
   - dask-labextension==6.0.0
+  - dask-geopandas~=0.3.1
 
   # Other useful generic python packages
   - pillow~=9.5 # Python imaging library, useful for many image-related tasks
