@@ -24,7 +24,7 @@ dependencies:
   # some more information
   - gh-scoped-creds==4.1
   # More git tools from github-cli
-  - gh
+  - gh~=2.32.1
 
   # Jupyter tools
   - ipython==8.6.0
@@ -68,7 +68,7 @@ dependencies:
   - matplotlib==3.6.2
   - plotly==5.11.0
   - seaborn==0.12.1 # statistical plotting with matplotlib
-  - geemap==0.24.4
+  - geemap~=0.24.4
 
   # Geospatial data packages
   - geopandas==0.12.1
