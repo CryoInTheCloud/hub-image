@@ -83,8 +83,9 @@ dependencies:
   - pooch==1.6.0
 
   # Cloud access tools and libraries
+  - awscli~=1.27.76
   - boto3
-  - s3fs==2022.11.0
+  - s3fs>=2023.6.0
   # handle login and similar details for accessing earthdata protected data
   # https://github.com/nsidc/earthaccess
   - earthaccess~=0.5.3
@@ -110,6 +111,7 @@ dependencies:
   - tqdm==4.64.1 # progress bars, with notebook support
 
   # Packages specific to cryo work
+  - h5coro~=0.0.6
   - icepyx==0.7.0
   - itslive~=0.2.0
   - is2view~=0.0.4
