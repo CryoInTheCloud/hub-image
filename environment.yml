@@ -110,6 +110,7 @@ dependencies:
   - tqdm==4.64.1 # progress bars, with notebook support
 
   # Packages specific to cryo work
+  - h5coro~=0.0.6
   - icepyx==0.7.0
   - itslive~=0.2.0
   - is2view~=0.0.4
