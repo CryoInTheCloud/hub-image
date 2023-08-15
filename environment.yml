@@ -80,6 +80,7 @@ dependencies:
   - h5py~=3.8
   - hdf5~=1.14
   - h5netcdf==1.1.0
+  - nco~=5.1.6
   - pooch==1.6.0
 
   # Cloud access tools and libraries
