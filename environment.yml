@@ -112,6 +112,7 @@ dependencies:
   - tqdm==4.64.1 # progress bars, with notebook support
 
   # Packages specific to climate work
+  - esmpy~=8.4.2
   - xmip~=0.7.1
 
   # Packages specific to cryo work
