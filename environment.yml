@@ -111,6 +111,9 @@ dependencies:
   - flake8==5.0.4
   - tqdm==4.64.1 # progress bars, with notebook support
 
+  # Packages specific to climate work
+  - xmip~=0.7.1
+
   # Packages specific to cryo work
   - h5coro~=0.0.6
   - icepyx==0.7.0
