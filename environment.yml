@@ -80,6 +80,7 @@ dependencies:
   - h5py~=3.8
   - hdf5~=1.14
   - h5netcdf==1.1.0
+  - nco~=5.1.6
   - pooch==1.6.0
 
   # Cloud access tools and libraries
@@ -93,7 +94,7 @@ dependencies:
   - pystac-client==0.5.1
   # Access datasets exposed via intake catalogs
   - intake==0.6.6
-  - intake-esm==2022.9.18
+  - intake-esm>=2023.7.7
   - intake-stac==0.4.0
   - intake-xarray==0.6.1
 
@@ -109,6 +110,10 @@ dependencies:
   - pep8==1.7.1
   - flake8==5.0.4
   - tqdm==4.64.1 # progress bars, with notebook support
+
+  # Packages specific to climate work
+  - esmpy~=8.4.2
+  - xmip~=0.7.1
 
   # Packages specific to cryo work
   - h5coro~=0.0.6
