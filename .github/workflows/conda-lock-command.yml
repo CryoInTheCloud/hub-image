@@ -27,17 +27,25 @@ jobs:
           comment-id: ${{ github.event.comment.id }}
           reactions: eyes
 
+      # Generate token from CryoInTheCloud bot
+      - uses: tibdex/github-app-token@v1
+        id: generate-token
+        with:
+          app_id: ${{ secrets.APP_ID }}
+          private_key: ${{ secrets.APP_PRIVATE_KEY }}
 
       # Checkout the git repository
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          token: ${{ steps.generate-token.outputs.token }}
 
       # Switch to pull request branch
       # https://github.com/actions/checkout/issues/331#issuecomment-925405415
       - name: Switch to Pull Request branch
         run: hub pr checkout ${{ github.event.issue.number }}
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ steps.generate-token.outputs.token }}
 
       # Add an emoji reaction to comment to indicate that conda-lock is starting
       - name: Add reaction
