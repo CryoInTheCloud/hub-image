@@ -35,16 +35,15 @@ jobs:
           repository: ${{ github.event.client_payload.pull_request.head.repo.full_name }}
           ref: ${{ github.event.client_payload.pull_request.head.ref }}
 
-      # Setup Python environment
-      - uses: actions/setup-python@v4
+      # Install conda-lock library with Micromamba
+      - name: Install conda-lock with Micromamba
+        uses: mamba-org/setup-micromamba@v1
         with:
-          python-version: '3.10'
-
-      # Install conda-lock library
-      # HACK: Temporarily pin urllib3<2 to resolve incompatibilities:
-      #       https://github.com/ionrock/cachecontrol/issues/292
-      - name: Install conda-lock
-        run: 'pip install conda-lock "urllib3<2"'
+          environment-name: conda-lock-env
+          create-args: >-
+            python=3.11
+            conda-lock
+            mamba
 
       # Run "conda-lock" for linux-64 only
       - name: Run conda-lock
