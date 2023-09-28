@@ -98,6 +98,7 @@ dependencies:
   - intake-esm>=2023.7.7
   - intake-stac==0.4.0
   - intake-xarray==0.6.1
+  - gcsfs>=2023.5.0
 
   # Distributed computing
   - dask==2022.11.0
