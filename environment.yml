@@ -122,7 +122,7 @@ dependencies:
   - icepyx==0.7.0
   - itslive~=0.2.0
   - is2view~=0.0.4
-  - sliderule~=3.6.0
+  - sliderule~=4.0.0
 
   # Desktop tools whose versions are more recent on conda-forge than ubuntu
   - qgis~=3.28.6
