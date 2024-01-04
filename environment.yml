@@ -12,7 +12,7 @@ dependencies:
   - nbgitpuller==1.1.1
   # Specify major version of jupyterlab to use. Manually bump it when you want to upgrade
   # jupyterlab version
-  - jupyterlab>=3.0,<4.0
+  - jupyterlab>=4.0,<4.1
   # This provides memory usage stats on JupyterLab and classic notebook
   - jupyter-resource-usage==0.7.1
   # https://syncthing.net/ provides a dropbox-like interface for syncing directories across users,
@@ -38,7 +38,7 @@ dependencies:
   - jupyterlab-favorites==3.1.0
   - jupyterlab-geojson==3.3.1
   - jupyterlab-git==0.41.0
-  - jupyterlab-myst==1.1.0
+  - jupyterlab-myst~=2.1.0
   - jupyter-book~=0.15.1
   - jupytext==1.14.1
   - nbconvert==6.5.3
@@ -68,7 +68,7 @@ dependencies:
   - matplotlib~=3.8.0
   - plotly==5.11.0
   - seaborn==0.12.1 # statistical plotting with matplotlib
-  - geemap~=0.24.4
+  - geemap~=0.30.0
 
   # Geospatial data packages
   - geopandas~=0.13.2
@@ -101,7 +101,7 @@ dependencies:
   - gcsfs>=2023.5.0
 
   # Distributed computing
-  - dask==2022.11.0
+  - dask>=2023.12.1
   - dask-labextension==6.0.0
   - dask-geopandas~=0.3.1
 
