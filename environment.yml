@@ -36,7 +36,7 @@ dependencies:
 
   - ipywidgets==7.7.2
   - jupyterlab-favorites==3.1.0
-  - jupyterlab-geojson==3.3.1
+  - jupyterlab-geojson~=3.4.0
   - jupyterlab-git==0.41.0
   - jupyterlab-myst~=2.1.0
   - jupyter-book~=0.15.1
