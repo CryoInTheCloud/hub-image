@@ -69,18 +69,13 @@ After your PR gets merged, our GitHub Actions will build and push a new image to
 can monitor the progress of this in the GitHub Actions tab in this repo.
 
 Once a new tag appears, someone with JupyterHub Admin permissions on the CryoCloud hub will have to
-update it to use the new image. With the new image selector, an admin will need to test the image in 
-our staging hub and then ask a 2i2c engineer to update the image by sending them the tag name.
+update the system to use the new image. With the new `Other` image selector, an admin will need to test 
+the image on CryoCloud and then ask a 2i2c engineer to update the image by sending them the tag name.
 
-1. Go to the [Configurator](https://staging.hub.cryointhecloud.com/services/configurator/) for the CryoCloud staging hub.
-2. Update the tag of the image you want under "User Docker Image" to use the new tag pushed for the PR in the
+1. When starting CryoCloud, instead of using `Python`, select `Other` from the `Image` selector.
+2. Add the tag of the image you want under `Custom` to use the new tag pushed for the PR in the
    [quay.io](https://quay.io/repository/cryointhecloud/cryo-hub-image?tab=tags) tags page. Make sure there are
    no trailing spaces!
-3. Hit 'Submit'. Note that due to a bug you might not get feedback that your submission succeeded - refresh the 
-   page to see if the tag stuck!
-4. Once this is done, you can go start your server again (restart it if it is currently running). This will make sure
-   you get to test the new image, with the changes you have performed!
+3. Hit 'Start'. Note that due to a bug in your image, CryoCloud may not start up and will show error messages. The image will need to be fixed if this occurs.
+4. Make sure all of the new tools are present and test that your imports work properly in a notebook.
 5. The admin can then send an email to 2i2c with the tag we want added to CryoCloud.
-
-The [2i2c docs](https://docs.2i2c.org/en/latest/admin/howto/configurator.html)
-have some more information about the configurator!
