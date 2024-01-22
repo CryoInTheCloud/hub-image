@@ -27,8 +27,8 @@ dependencies:
   - gh~=2.32.1
 
   # Jupyter tools
-  - ipython==8.6.0
-  - ipywidgets==7.7.2
+  - ipython~=8.20.0
+  - ipywidgets~=8.1.1
   - jupyterlab-favorites==3.1.0
   - jupyterlab-geojson~=3.4.0
   - jupyterlab-git~=0.50.0
