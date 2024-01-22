@@ -49,7 +49,7 @@ dependencies:
 #  - jupyterlab-h5web~=11.1.0
   - jupyter-book~=0.15.1
   - jupytext==1.14.1
-  - nbconvert==6.5.3
+  - nbconvert==7.14.2
 #  - nbdime~=4.0.1
 
   # Core scientific python stack
