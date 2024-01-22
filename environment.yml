@@ -25,6 +25,10 @@ dependencies:
   - gh-scoped-creds==4.1
   # More git tools from github-cli
   - gh~=2.32.1
+  
+  # VS Code support
+  - jupyter-vscode-proxy==0.5
+  - code-server~=4.16.1
 
   # Jupyter tools
   - ipython==8.6.0
