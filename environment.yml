@@ -108,7 +108,7 @@ dependencies:
   - intake-xarray==0.6.1
   - gcsfs>=2023.5.0
 
-  # Distributed computing *
+  # Distributed computing
   - dask==2024.1.0
   - dask-labextension==7.0.0
   - dask-geopandas~=0.3.1
@@ -125,7 +125,7 @@ dependencies:
   - esmpy~=8.4.2
   - xmip~=0.7.1
 
-  # Packages specific to cryo work *
+  # Packages specific to cryo work
   - h5coro~=0.0.6
   - icepyx~=0.8.1
   - itslive~=0.3.0
