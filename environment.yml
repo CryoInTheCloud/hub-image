@@ -29,7 +29,7 @@ dependencies:
   # VS Code support
   - jupyter-vscode-proxy==0.5
 #  - jupyter-vscode-server==0.0.10
-#  - code-server==4.20.0
+  - code-server~=4.16.1
 
   # Jupyter tools
   - ipython~=8.17.0
