@@ -12,9 +12,9 @@ dependencies:
   - nbgitpuller==1.2.0
   # Specify major version of jupyterlab to use. Manually bump it when you want to upgrade
   # jupyterlab version
-  - jupyterlab>=4.0
+  - jupyterlab>=4.0,<4.1
   # This provides memory usage stats on JupyterLab and classic notebook
-  - jupyter-resource-usage~=1.0.0
+  - jupyter-resource-usage~=1.0.1
   # https://syncthing.net/ provides a dropbox-like interface for syncing directories across users,
   # hubs and machines. Used along with `jupyter-syncthing-proxy`.
   - jupyter-syncthing-proxy==1.0.3
@@ -41,16 +41,16 @@ dependencies:
 
   - ipywidgets~=8.0.0
   - jupyterlab-favorites==3.2.0
-  - jupyterlab-geojson==3.4.0
+  - jupyterlab-geojson~=3.4.0
   - jupyter-collaboration~=2.0.1
-  - jupyterlab-git==0.50.0
+  - jupyterlab-git~=0.50.0
 #  - jupyter-ai==2.9.1 # Requires pandas>=2.0.1
-  - jupyterlab-myst==2.1.0
+  - jupyterlab-myst~=2.1.0
   - jupyterlab-h5web~=11.1.0
   - jupyter-book~=0.15.1
   - jupytext~=1.16.1
   - nbconvert==6.5.3
-  - nbdime==4.0.1
+  - nbdime~=4.0.1
 
   # Core scientific python stack
   - cython==0.29.32 # optimization, C API access
