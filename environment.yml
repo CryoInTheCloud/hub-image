@@ -5,16 +5,16 @@ channels:
   - nodefaults
 
 dependencies:
-  - python~=3.10.10
+  - python~=3.11.0
   # Required until https://github.com/jupyterhub/repo2docker/pull/1196 is merged
-  - jupyterhub-singleuser>=3.0,<4.0
+  - jupyterhub-singleuser~=4.0.1
   # nbgitpuller is very helpful when distributing user content
-  - nbgitpuller==1.1.1
+  - nbgitpuller==1.2.0
   # Specify major version of jupyterlab to use. Manually bump it when you want to upgrade
   # jupyterlab version
   - jupyterlab>=4.0,<4.1
   # This provides memory usage stats on JupyterLab and classic notebook
-  - jupyter-resource-usage~=0.7.1
+  - jupyter-resource-usage~=1.0.1
   # https://syncthing.net/ provides a dropbox-like interface for syncing directories across users,
   # hubs and machines. Used along with `jupyter-syncthing-proxy`.
   - jupyter-syncthing-proxy==1.0.3
@@ -31,26 +31,25 @@ dependencies:
   - code-server~=4.16.1
 
   # Jupyter tools
-  - ipython~=8.6.0
+  - ipython~=8.20.0
 
   # Warning: There's a bug in ipykernel 6.18 that crashes hvplot.
   # See https://github.com/ipython/ipykernel/pull/1037. Restriction
   # can be relaxed once that's fixed.
-  - ipykernel=6.16.0
+  - ipykernel~=6.29.0
 
-  - ipywidgets~=7.7.2
-#  - jupyterlab-favorites~=3.2.0
-#  - jupyterlab-favorites==3.1.1
-#  - jupyterlab-geojson~=3.4.0
-#  - jupyter-collaboration~=2.0.1
-#  - jupyterlab-git~=0.50.0
+  - ipywidgets~=8.1.1
+  - jupyterlab-favorites~=3.2.0
+  - jupyterlab-geojson~=3.4.0
+  - jupyter-collaboration~=2.0.1
+  - jupyterlab-git~=0.50.0
 #  - jupyter-ai==2.9.1 # Requires pandas>=2.0.1
   - jupyterlab-myst~=2.1.0
-#  - jupyterlab-h5web~=11.1.0
+  - jupyterlab-h5web~=11.1.0
   - jupyter-book~=0.15.1
-  - jupytext==1.14.1
-  - nbconvert==7.14.2
-#  - nbdime~=4.0.1
+  - jupytext==1.16.1
+  - nbconvert==6.5.3
+  - nbdime~=4.0.1
 
   # Core scientific python stack
   - cython==0.29.32 # optimization, C API access
@@ -58,9 +57,9 @@ dependencies:
   - networkx==2.8.8
   - numba==0.58.1 # high-performance numerics
   - numpy==1.23.5
-  - pandas~=1.5.1
+  - pandas>=1.5.1
   - scikit-image==0.19.3
-  - scikit-learn==1.1.3
+  - scikit-learn>=1.2.2,<2.0.0
   - scipy==1.9.3
   - statsmodels==0.13.5
   - sympy~=1.11.0
@@ -110,7 +109,7 @@ dependencies:
 
   # Distributed computing
   - dask==2024.1.0
-  - dask-labextension==6.0.0
+  - dask-labextension==7.0.0
   - dask-geopandas~=0.3.1
   
   # Other useful generic python packages
@@ -137,7 +136,7 @@ dependencies:
   # Maybe needed for qgis? https://github.com/conda-forge/qgis-feedstock/issues/263
   - pyopencl
   # Resolves warning "No ICDs were found": https://github.com/CryoInTheCloud/hub-image/issues/50
-#  - ocl-icd-system
+  - ocl-icd-system
   # needed for Linux desktop to work
   - websockify>=0.10
   # Includes new subcommands (`switch` & `restore`) and vulnerability fixes
