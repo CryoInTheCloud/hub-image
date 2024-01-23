@@ -34,7 +34,7 @@ dependencies:
   - jupyterlab-git~=0.50.0
   - jupyterlab-myst~=2.1.0
   - jupyter-book~=0.15.1
-  - jupytext==1.14.1
+  - jupytext~=1.16.1
   - nbconvert==6.5.3
   - nbdime~=4.0.1
 
