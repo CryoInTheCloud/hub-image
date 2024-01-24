@@ -9,7 +9,7 @@ dependencies:
   # Required until https://github.com/jupyterhub/repo2docker/pull/1196 is merged
   - jupyterhub-singleuser~=4.0.1
   # nbgitpuller is very helpful when distributing user content
-  - nbgitpuller~=1.1.0
+  - nbgitpuller~=1.2.0
   # Specify major version of jupyterlab to use. Manually bump it when you want to upgrade
   # jupyterlab version
   - jupyterlab>=4.0,<4.1
@@ -31,19 +31,22 @@ dependencies:
   - code-server~=4.16.1
 
   # Jupyter tools
+#  - bqplot~=0.12.1
   - ipython~=8.20.0
   - ipywidgets~=8.1.1
   - jupyter-ai~=2.9.1
   - jupyter-book~=0.15.1
-  - jupyter-offlinenotebook~=0.2.2
-  - jupyter-collaboration~=2.0.1
-  - jupyterlab-favorites~=3.2.1
+#  - jupyter-offlinenotebook~=0.2.2
+#  - jupyter-collaboration~=2.0.1
+#  - jupyterlab-favorites~=3.2.1
   - jupyterlab-geojson~=3.4.0
   - jupyterlab-git~=0.50.0
-  - jupyterlab-h5web~=11.1.0
+#  - jupyterlab-h5web~=11.1.0
   - jupyterlab-myst~=2.1.0
+#  - jupyterlab-plotly~=5.18.0
+#  - jupyterlab-pygments~=0.3.0
   - jupytext~=1.16.1
-  - nbconvert==6.5.3
+  - nbconvert==6.5.3 #7.14.2
   - nbdime~=4.0.1
 
   # Core scientific python stack
