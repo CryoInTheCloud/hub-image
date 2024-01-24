@@ -138,7 +138,7 @@ dependencies:
   - git>=2.39
 
   # Not all packages will be available from conda-forge, we install from pip when we need to.
-  - pip==23.3.2
+  - pip~=23.3.2
   - pip:
     # Access linux desktop from inside JupyterHub
     - jupyter-desktop-server==0.1.3
