@@ -38,7 +38,7 @@ dependencies:
   - jupyter-book~=0.15.1
 #  - jupyter-offlinenotebook~=0.2.2
 #  - jupyter-collaboration~=2.0.1
-#  - jupyterlab-favorites~=3.2.1
+  - jupyterlab-favorites~=3.2.1
   - jupyterlab-geojson~=3.4.0
   - jupyterlab-git~=0.50.0
   - jupyterlab-h5web~=11.1.0
