@@ -51,12 +51,12 @@ dependencies:
   - networkx==2.8.8
   - numba~=0.58.1 # high-performance numerics
   - numpy==1.23.5
-  - pandas>=1.5.1
+  - pandas>=2.0.1,<3.0
   - scikit-image==0.19.3
   - scikit-learn>=1.2.2,<2.0.0
   - scipy==1.9.3
   - statsmodels==0.13.5
-  - sympy~=1.11.0
+  - sympy~=1.12
   - xarray>=2023.05.0
 
   # Visualization packages
@@ -120,7 +120,6 @@ dependencies:
   # Packages specific to cryo work
   - h5coro~=0.0.6
   - icepyx~=0.8.1
-  - itslive~=0.3.0
   - is2view~=0.0.5
   - sliderule~=4.0.0
 
@@ -141,3 +140,4 @@ dependencies:
   - pip:
     # Access linux desktop from inside JupyterHub
     - jupyter-desktop-server==0.1.3
+    - itslive~=0.3.2 # Move above once updates are in mamba
