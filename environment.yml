@@ -49,7 +49,7 @@ dependencies:
   - cython==0.29.32 # optimization, C API access
   - hypothesis==6.58.0 # needed by numpy testing tools
   - networkx==2.8.8
-  - numba==0.58.1 # high-performance numerics
+  - numba~=0.58.1 # high-performance numerics
   - numpy==1.23.5
   - pandas>=1.5.1
   - scikit-image==0.19.3
