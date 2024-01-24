@@ -36,7 +36,7 @@ dependencies:
   - ipykernel~=6.29.0
 
   - ipywidgets~=8.1.1
-  - jupyterlab-favorites~=3.2.0
+  - jupyterlab-favorites~=3.2.1
   - jupyterlab-geojson~=3.4.0
   - jupyter-collaboration~=2.0.1
   - jupyterlab-git~=0.50.0
