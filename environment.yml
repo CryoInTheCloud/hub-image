@@ -41,7 +41,7 @@ dependencies:
 #  - jupyterlab-favorites~=3.2.1
   - jupyterlab-geojson~=3.4.0
   - jupyterlab-git~=0.50.0
-#  - jupyterlab-h5web~=11.1.0
+  - jupyterlab-h5web~=11.1.0
   - jupyterlab-myst~=2.1.0
 #  - jupyterlab-plotly~=5.18.0
 #  - jupyterlab-pygments~=0.3.0
