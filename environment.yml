@@ -21,7 +21,7 @@ dependencies:
   - gh-scoped-creds==4.1
   # More git tools from github-cli
   - gh~=2.32.1
-  
+
   # VS Code support
   - jupyter-vscode-proxy~=0.5
   - code-server~=4.16.1
@@ -121,7 +121,7 @@ dependencies:
   - h5coro~=0.0.6
   - icepyx~=1.0.0
   - itslive~=0.3.2
-  - is2view~=0.0.5
+  - is2view~=0.0.8
   - sliderule~=4.0.0
 
   # Desktop tools whose versions are more recent on conda-forge than ubuntu
