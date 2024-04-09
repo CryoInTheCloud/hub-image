@@ -1,5 +1,9 @@
 name: cryocloud
 
+channels:
+  - conda-forge
+  - nodefaults
+
 dependencies:
   - python~=3.11.0
   # Required until https://github.com/jupyterhub/repo2docker/pull/1196 is merged
