@@ -41,7 +41,7 @@ described above, you can skip the first line):
 
 ```
 conda-lock lock --mamba --kind explicit --file environment.yml --platform linux-64
-repo2docker --apendix "$(cat appendix)" .
+repo2docker --appendix "$(cat appendix)" .
 ```
 
 This build may take up to 30 minutes.
