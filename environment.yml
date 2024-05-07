@@ -41,7 +41,7 @@ dependencies:
   - jupyterlab-geojson~=3.4.0
   - jupyterlab-git~=0.50.0
   - jupyterlab-h5web~=11.1.0
-  - jupyterlab-myst~=2.1.0
+  - jupyterlab-myst~=2.4.2
 #  - jupyterlab-plotly~=5.18.0 # Outdated accoring to jupyterlab
   - jupyterlab_pygments~=0.3.0 # To bring extension uptodate
   - jupytext~=1.16.1
