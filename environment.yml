@@ -49,6 +49,8 @@ dependencies:
   - nbdime~=4.0.1
   # JupyterBook Addons
   - sphinxcontrib-bibtex
+  # dashboards
+  - voila~=0.5
 
   # Core scientific python stack
   - cython==0.29.32 # optimization, C API access
@@ -68,15 +70,15 @@ dependencies:
   # Visualization packages
   - bokeh~=3.2.2
   - cartopy~=0.22.0 # geospatial plotting with matplotlib
+  - geemap~=0.32
   - geoviews~=1.10.1
   - hvplot~=0.8.4
   - ipyleaflet~=0.17.3
   - ipympl~=0.9.3 # This enables matplotlib interaction with jupyter widgets
+  - leafmap~=0.31
   - matplotlib~=3.8.0
   - plotly~=5.18.0
   - seaborn==0.12.1 # statistical plotting with matplotlib
-  - geemap~=0.30.0
-  - leafmap~=0.31
 
   # Geospatial data packages
   - geopandas~=0.13.2
@@ -92,7 +94,6 @@ dependencies:
   - pooch==1.6.0
   - zarr~=2.18
   - kerchunk~=0.2
-  - voila~=0.5
 
   # Cloud access tools and libraries
   - awscli~=1.27.76
