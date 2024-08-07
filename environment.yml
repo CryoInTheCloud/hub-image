@@ -47,6 +47,7 @@ dependencies:
   - jupytext~=1.16.1
   - nbdime~=4.0.1
   # JupyterBook Addons
+  - sphinx~=7.3
   - sphinxcontrib-bibtex
   # dashboards
   - voila~=0.5
