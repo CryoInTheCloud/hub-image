@@ -45,10 +45,11 @@ jobs:
             conda-lock
             mamba
 
-      # Run "conda-lock" for linux-64 only
+      # Generate unified 'conda-lock.yml' and platform-specific lockfiles
       - name: Run conda-lock
         run: |
-          conda-lock lock --mamba --kind explicit --file environment.yml --platform linux-64
+          conda-lock lock --mamba --file environment.yml --platform linux-64
+          conda-lock render --kind explicit --platform linux-64
 
       # Commit the change to the PR branch if any changes
       - name: Commit condalock files to PR
