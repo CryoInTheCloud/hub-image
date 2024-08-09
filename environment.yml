@@ -37,6 +37,7 @@ dependencies:
   - jupyter-book~=1.0.0
   # - jupyter-offlinenotebook~=0.2.2 # Outdated according to jupyterlab
   # - jupyter-collaboration~=2.0.1
+  - jupyter-sshd-proxy~=0.2
   - jupyterlab-favorites~=3.2.1
   - jupyterlab-geojson~=3.4.0
   - jupyterlab-git~=0.50.0
