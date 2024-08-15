@@ -105,6 +105,7 @@ dependencies:
   - earthaccess~=0.10.0
   # Access datasets exposed via STAC
   - pystac-client~=0.8.3
+  - stackstac~=0.5.1
   # Access datasets exposed via intake catalogs
   - intake==0.6.6
   - intake-esm>=2023.7.7
