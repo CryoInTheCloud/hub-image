@@ -83,6 +83,7 @@ dependencies:
   - seaborn~=0.13.2 # statistical plotting with matplotlib
 
   # Machine Learning packages
+  - py-xgboost~=2.1.1=cpu*
   - pytorch~=2.3.1=*cpu*
 
   # Geospatial data packages
