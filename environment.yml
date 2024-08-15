@@ -139,7 +139,7 @@ dependencies:
   - itslive~=0.3.2
   - is2view~=0.0.8
   - sliderule~=4.5
-  - snowexsql~=0.4
+  - snowexsql~=0.5
 
   # Desktop tools whose versions are more recent on conda-forge than ubuntu
   - qgis~=3.38.0
