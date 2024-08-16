@@ -84,7 +84,6 @@ dependencies:
 
   # Machine Learning packages
   - py-xgboost~=2.1.1=cpu*
-  - pytorch~=2.3.1=*cpu*
 
   # Geospatial data packages
   - geopandas>=0.14.4
