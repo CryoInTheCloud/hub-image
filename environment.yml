@@ -28,15 +28,16 @@ dependencies:
 
   # VS Code support
   - jupyter-vscode-proxy~=0.5
-  - code-server~=4.16.1
+  - code-server~=4.23
 
   # Jupyter tools
   - ipython~=8.17
   - ipywidgets~=8.1.1
   - jupyter-ai~=2.20
   - jupyter-book~=1.0.0
-  # - jupyter-offlinenotebook~=0.2.2 # Outdated according to jupyterlab
   # - jupyter-collaboration~=2.0.1
+  - jupyter-offlinenotebook~=0.3.1
+  - jupyter-sshd-proxy~=0.2
   - jupyterlab-favorites~=3.2.1
   - jupyterlab-geojson~=3.4.0
   - jupyterlab-git~=0.50.0
@@ -48,7 +49,8 @@ dependencies:
   # JupyterBook Addons
   - sphinx~=7.3
   - sphinxcontrib-bibtex
-  # dashboards
+  # Interactive apps
+  - itables~=2.1
   - voila~=0.5
 
   # Core scientific python stack
@@ -80,6 +82,9 @@ dependencies:
   - plotly~=5.18.0
   - seaborn~=0.13.2 # statistical plotting with matplotlib
 
+  # Machine Learning packages
+  - py-xgboost~=2.1.1=cpu*
+
   # Geospatial data packages
   - geopandas>=0.14.4
   - pygmt~=0.12.0
@@ -103,6 +108,7 @@ dependencies:
   - earthaccess~=0.10.0
   # Access datasets exposed via STAC
   - pystac-client~=0.8.3
+  - stackstac~=0.5.1
   # Access datasets exposed via intake catalogs
   - intake==0.6.6
   - intake-esm>=2023.7.7
@@ -129,11 +135,11 @@ dependencies:
 
   # Packages specific to cryo work
   - h5coro~=0.0.6
-  - icepyx~=1.1.0
+  - icepyx~=1.2.0
   - itslive~=0.3.2
   - is2view~=0.0.8
   - sliderule~=4.5
-  - snowexsql~=0.4
+  - snowexsql~=0.5
 
   # Desktop tools whose versions are more recent on conda-forge than ubuntu
   - qgis~=3.38.0
