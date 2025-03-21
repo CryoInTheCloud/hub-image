@@ -66,7 +66,7 @@ dependencies:
   - scipy>=1.10
   - statsmodels==0.13.5
   - sympy~=1.12
-  - xarray>=2025.01.0
+  - xarray>=2025.03.0
 
   # Visualization packages
   - bokeh~=3.2.2
