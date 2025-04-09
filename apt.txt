@@ -42,6 +42,7 @@ texlive-plain-generic
 texlive-fonts-extra
 texlive-fonts-recommended
 texlive-lang-chinese
+texlive-publishers
 texlive-science
 latexmk
 lmodern
