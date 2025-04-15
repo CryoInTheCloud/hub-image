@@ -41,6 +41,7 @@ texlive-xetex
 texlive-plain-generic
 texlive-fonts-extra
 texlive-fonts-recommended
+texlive-bibtex-extra
 texlive-lang-chinese
 texlive-publishers
 texlive-science
