@@ -44,6 +44,7 @@ dependencies:
   - jupyterlab-h5web~=11.1.0
   - jupyterlab-myst~=2.4.2
   - jupyterlab_pygments~=0.3.0 # To bring extension up-to-date
+  - jupytergis
   - jupytext~=1.16.1
   - nbdime~=4.0.1
   # JupyterBook Addons
