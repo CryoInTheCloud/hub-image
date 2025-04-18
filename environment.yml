@@ -158,3 +158,6 @@ dependencies:
   - pip:
     # Access linux desktop from inside JupyterHub
     - jupyter-desktop-server==0.1.3
+    # For JupyterBook
+    - jinja-markdown==1.210911
+    - jupyter-book==2.0.0a0
