@@ -34,7 +34,6 @@ dependencies:
   - ipython~=8.17
   - ipywidgets~=8.1.1
   - jupyter-ai~=2.20
-  - jupyter-book~=1.0.0
   # - jupyter-collaboration~=2.0.1
   - jupyter-offlinenotebook~=0.3.1
   - jupyter-sshd-proxy~=0.2
@@ -44,7 +43,7 @@ dependencies:
   - jupyterlab-h5web~=11.1.0
   - jupyterlab-myst~=2.4.2
   - jupyterlab_pygments~=0.3.0 # To bring extension up-to-date
-  - jupytext~=1.16.1
+  - jupytext~=1.17.0
   - nbdime~=4.0.1
   # JupyterBook Addons
   - sphinx~=7.3
@@ -154,7 +153,7 @@ dependencies:
   - git>=2.39
 
   # Not all packages will be available from conda-forge, we install from pip when we need to.
-  - pip~=23.3.2
+  - pip~=25.0.0
   - pip:
     # Access linux desktop from inside JupyterHub
     - jupyter-desktop-server==0.1.3
