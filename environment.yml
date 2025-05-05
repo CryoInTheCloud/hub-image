@@ -142,7 +142,7 @@ dependencies:
   - snowexsql~=0.5
 
   # Desktop tools whose versions are more recent on conda-forge than ubuntu
-  - qgis~=3.38.0
+  - qgis~=3.40.0
   # Maybe needed for qgis? https://github.com/conda-forge/qgis-feedstock/issues/263
   - pyopencl
   # Resolves warning "No ICDs were found": https://github.com/CryoInTheCloud/hub-image/issues/50
