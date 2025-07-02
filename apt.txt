@@ -76,15 +76,19 @@ tree
 #fzf   # fuzzy file finder
 
 ## This section adds tools for desktop environment usage
-dbus-x11
-xorg
-xubuntu-icon-theme
-xfce4
-xfce4-goodies
-xclip
-xsel
-firefox
 chromium-browser
+dbus-x11
+firefox
+tigervnc-standalone-server
+xclip
+xfce4
+xfce4-panel
+xfce4-session
+xfce4-settings
+xfce4-goodies
+xorg
+xsel
+xubuntu-icon-theme
 
 # GUI text editors
 emacs
