@@ -1,21 +1,11 @@
-FROM quay.io/jupyter/repo2docker:2023.06.0-1.ubuntu-22.04
+FROM quay.io/cryointhecloud/hub-image:latest
 
-# Copy the repository contents
-COPY . /tmp/repo
+# Copy your modified environment.yml
+COPY environment.yml /tmp/environment.yml
 
-# Set working directory
-WORKDIR /tmp/repo
-
-# Build the image using repo2docker
+# Update the conda environment with your new package
 USER root
-RUN python -m pip install --no-cache-dir repo2docker
+RUN mamba env update -n notebook -f /tmp/environment.yml
 
-# Use repo2docker to build the environment
-RUN repo2docker --user-id=1000 --user-name=jovyan --debug /tmp/repo /srv/conda
-
-# Switch to the jovyan user
-USER 1000
-WORKDIR /home/jovyan
-
-# Set the default command
-CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
+# Switch back to jovyan user
+USER $NB_UID
