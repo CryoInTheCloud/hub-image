@@ -164,3 +164,4 @@ dependencies:
     # For JupyterBook
     - jinja-markdown==1.210911
     - jupyter-book==2.0.0a0
+    - jupyter-keepalive
