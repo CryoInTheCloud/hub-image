@@ -8,6 +8,9 @@ set -euo pipefail
 # pop open GUIs
 export DISPLAY=":1.0"
 
+# Set pixi package cache dir
+export PIXI_CACHE_DIR="/tmp/pixi-cache"
+
 # Tell gh-scoped-creds which GitHub app to use for push access
 # See https://github.com/jupyterhub/gh-scoped-creds#github-app-configuration
 export GH_SCOPED_CREDS_CLIENT_ID="Iv1.bd27058fd393e285"
