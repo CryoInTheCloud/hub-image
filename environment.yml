@@ -155,6 +155,7 @@ dependencies:
   # Includes new subcommands (`switch` & `restore`) and vulnerability fixes
   # over the version available via ubuntu sources
   - git>=2.39
+  - pixi
 
   # Not all packages will be available from conda-forge, we install from pip when we need to.
   - pip~=25.0.0
