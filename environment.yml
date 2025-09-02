@@ -161,6 +161,6 @@ dependencies:
   # Not all packages will be available from conda-forge, we install from pip when we need to.
   - pip~=25.0.0
   - pip:
-    # For JupyterBook
-    - jinja-markdown==1.210911
-    - jupyter-book>=2.0.0b0
+      # For JupyterBook
+      - jinja-markdown==1.210911
+      - jupyter-book>=2.0.0b3
