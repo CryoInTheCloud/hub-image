@@ -17,16 +17,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # Generate token from CryoInTheCloud bot
-      - uses: tibdex/github-app-token@v1
-        id: generate-token
+      - uses: actions/create-github-app-token@bf559f85448f9380bcfa2899dbdc01eb5b37be3a # v3.0.0-beta.2
+        id: app-token
         with:
-          app_id: ${{ secrets.APP_ID }}
-          private_key: ${{ secrets.APP_PRIVATE_KEY }}
+          app-id: ${{ secrets.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
 
       - name: Slash Command Dispatch
         uses: peter-evans/slash-command-dispatch@v3
         with:
-          token: ${{ steps.generate-token.outputs.token }}
+          token: ${{ steps.app-token.outputs.token }}
           reaction-token: ${{ secrets.GITHUB_TOKEN }}
           commands: |
             condalock
