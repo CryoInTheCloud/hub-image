@@ -5,14 +5,15 @@ on:
     branches:
       - main
     paths:
-      - 'apt.txt'
-      - 'conda-linux-64.lock'
-      - 'environment.yml'
-      - 'start'
-      - 'postBuild'
+      - "apt.txt"
+      - "conda-linux-64.lock"
+      - "environment.yml"
+      - "start"
+      - "postBuild"
       # Trigger rebuilds if the build process changes
-      - '.github/workflows/build.yaml'
+      - ".github/workflows/build.yaml"
 
+permissions: {}
 
 jobs:
   build-and-push:
@@ -30,7 +31,9 @@ jobs:
         df -h
 
     - name: Checkout files in repo
-      uses: actions/checkout@main
+      uses: actions/checkout@v5
+      with:
+        persist-credentials: false
 
     - name: Build and push the image to quay.io
       uses: jupyterhub/repo2docker-action@master
