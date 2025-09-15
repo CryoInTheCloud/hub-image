@@ -1,0 +1,28 @@
+# Respond to dependabot Pull Request updating environment.yml with /condalock command!
+name: Pull Request comment
+
+on:
+  pull_request:
+    types: [opened, reopened]
+    paths: ["environment.yml"]
+
+permissions: {}
+
+jobs:
+  DeployPangeoBot:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.user.login == 'dependabot[bot]' && github.repository == github.event.pull_request.head.repo.full_name
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        with:
+          persist-credentials: false
+
+      - name: Add Condalock Comment
+        uses: peter-evans/create-or-update-comment@71345be0265236311c031f5c7866368bd1eff043 # v4.0.0
+        with:
+          issue-number: ${{github.event.number}}
+          body: |
+            /condalock
+            Automatically locking new conda environment, building, and testing images...

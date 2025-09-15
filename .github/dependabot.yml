@@ -4,10 +4,18 @@
 # https://docs.github.com/en/code-security/dependabot/working-with-dependabot/dependabot-options-reference
 
 version: 2
+enable-beta-ecosystems: true
 updates:
+  - package-ecosystem: "conda"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    cooldown:
+      default-days: 7
+    open-pull-requests-limit: 2
+
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "quarterly"
-    # Allow up to 2 open pull requests at a time
     open-pull-requests-limit: 2
