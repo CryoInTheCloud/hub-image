@@ -9,9 +9,11 @@ on:
 permissions: {}
 
 jobs:
-  DeployPangeoBot:
+  CallCondaLock:
     runs-on: ubuntu-latest
     if: github.event.pull_request.user.login == 'dependabot[bot]' && github.repository == github.event.pull_request.head.repo.full_name
+    permissions:
+      pull-requests: write
 
     steps:
       - name: Checkout Repository
@@ -20,7 +22,7 @@ jobs:
           persist-credentials: false
 
       - name: Add Condalock Comment
-        uses: peter-evans/create-or-update-comment@71345be0265236311c031f5c7866368bd1eff043 # v4.0.0
+        uses: peter-evans/create-or-update-comment@e8674b075228eee787fea43ef493e45ece1004c9 # v5.0.0
         with:
           issue-number: ${{github.event.number}}
           body: |
