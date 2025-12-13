@@ -163,4 +163,4 @@ dependencies:
   - pip:
       # For JupyterBook
       - jinja-markdown==1.210911
-      - jupyter-book>=2.0.0b3
+      - jupyter-book>=2.1.0
