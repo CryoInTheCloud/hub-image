@@ -7,9 +7,9 @@ channels:
 dependencies:
   - python~=3.12.0
   # Required until https://github.com/jupyterhub/repo2docker/pull/1196 is merged
-  - jupyterhub-singleuser~=4.0.1
+  - jupyterhub-singleuser~=4.0
   # nbgitpuller is very helpful when distributing user content
-  - nbgitpuller~=1.2.0
+  - nbgitpuller~=1.2
   # Specify major version of jupyterlab to use. Manually bump it when you want to upgrade
   # jupyterlab version
   - jupyterlab>=4.4,<5
@@ -35,19 +35,19 @@ dependencies:
   - ipywidgets~=8.1.1
   - jupyter-ai~=2.31
   # - jupyter-collaboration~=2.0.1
-  - jupyter-offlinenotebook~=0.3.1
+  - jupyter-offlinenotebook~=0.3
   # Access linux desktop from inside JupyterHub
-  - jupyter-remote-desktop-proxy>=3.0.1
+  - jupyter-remote-desktop-proxy>=3.0
   - jupyter-sshd-proxy~=0.2
-  - jupyterlab-favorites~=3.2.1
-  - jupyterlab-geojson~=3.4.0
-  - jupyterlab-git~=0.50.0
-  - jupyterlab-h5web~=11.1.0
-  - jupyterlab-myst~=2.4.2
-  - jupyterlab_pygments~=0.3.0 # To bring extension up-to-date
-  - jupytergis>=0.5.0
-  - jupytext~=1.17.0
-  - nbdime~=4.0.1
+  - jupyterlab-favorites~=3.2
+  - jupyterlab-geojson~=3.4
+  - jupyterlab-git~=0.50
+  - jupyterlab-h5web~=11.1
+  - jupyterlab-myst~=2.4
+  - jupyterlab_pygments~=0.3 # To bring extension up-to-date
+  - jupytergis>=0.5
+  - jupytext~=1.17
+  - nbdime~=4.0
   # JupyterBook Addons
   - sphinx~=7.3
   - sphinxcontrib-bibtex
@@ -76,8 +76,8 @@ dependencies:
   - geemap~=0.32
   - geoviews~=1.15.0
   - hvplot~=0.10.0
-  - ipyleaflet~=0.19.2
-  - ipympl~=0.9.3 # This enables matplotlib interaction with jupyter widgets
+  - ipyleaflet~=0.19
+  - ipympl~=0.9 # This enables matplotlib interaction with jupyter widgets
   - leafmap~=0.36
   - lonboard~=0.9
   - matplotlib>=3.10.0
@@ -144,6 +144,7 @@ dependencies:
   - snowexsql~=0.5
 
   # Packages specific to technical publishing
+  - jupyter-book~=2.1
   - mystmd>=1.3.26
 
   # Desktop tools whose versions are more recent on conda-forge than ubuntu
@@ -159,8 +160,6 @@ dependencies:
   - git>=2.39
 
   # Not all packages will be available from conda-forge, we install from pip when we need to.
-  - pip~=25.0.0
-  - pip:
-      # For JupyterBook
-      - jinja-markdown==1.210911
-      - jupyter-book>=2.0.0b3
+  - pip~=25.0
+  # - pip:
+  #     - <package-name>
