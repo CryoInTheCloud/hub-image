@@ -103,3 +103,6 @@ meld
 
 # Needed for qgis maybe? https://github.com/conda-forge/pygridgen-feedstock/issues/10
 libgl1-mesa-glx
+
+# Needed for jupyter-sshd-proxy
+openssh-server
