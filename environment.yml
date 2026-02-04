@@ -12,7 +12,7 @@ dependencies:
   - nbgitpuller~=1.2
   # Specify major version of jupyterlab to use. Manually bump it when you want to upgrade
   # jupyterlab version
-  - jupyterlab>=4.4,<5
+  - jupyterlab>=4.5,<5
   # This provides memory usage stats on JupyterLab and classic notebook
   - jupyter-resource-usage>=1.2.0
   # https://syncthing.net/ provides a dropbox-like interface for syncing directories across users,
@@ -57,7 +57,7 @@ dependencies:
 
   # Core scientific python stack
   - cython~=3.0 # optimization, C API access
-  - flox~=0.9.7 # optimization, xarray operations
+  - flox>=0.10 # optimization, xarray operations
   - hypothesis>=6.58 # needed by numpy testing tools
   - networkx>=3.6.1
   - numba>=0.63.0 # high-performance numerics
@@ -102,7 +102,7 @@ dependencies:
   - kerchunk~=0.2
 
   # Cloud access tools and libraries
-  - awscli~=2.17
+  - awscli~=2.25
   - boto3
   - s3fs>=2023.6.0
   # handle login and similar details for accessing earthdata protected data
@@ -112,14 +112,14 @@ dependencies:
   - pystac-client~=0.8
   - stackstac~=0.5
   # Access datasets exposed via intake catalogs
-  - intake>=0.6
-  - intake-esm>=2023.7.7
+  - intake>=2.0
+  - intake-esm>=2025.7.9
   - intake-stac>=0.4
-  - intake-xarray>=0.6
+  - intake-xarray>=2.0
   - gcsfs>=2023.5.0
 
   # Distributed computing
-  - dask>=2023.12.1
+  - dask>=2026.1.2
   - dask-labextension~=7.0
   - dask-geopandas~=0.4
 
