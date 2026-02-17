@@ -5,87 +5,87 @@ channels:
   - nodefaults
 
 dependencies:
-  - python~=3.11.0
+  - python~=3.12.0
   # Required until https://github.com/jupyterhub/repo2docker/pull/1196 is merged
-  - jupyterhub-singleuser~=4.0.1
+  - jupyterhub-singleuser~=4.0
   # nbgitpuller is very helpful when distributing user content
-  - nbgitpuller~=1.2.0
+  - nbgitpuller~=1.2
   # Specify major version of jupyterlab to use. Manually bump it when you want to upgrade
   # jupyterlab version
   - jupyterlab>=4.5,<5
   # This provides memory usage stats on JupyterLab and classic notebook
-  - jupyter-resource-usage~=1.0.1
+  - jupyter-resource-usage>=1.2.0
   # https://syncthing.net/ provides a dropbox-like interface for syncing directories across users,
   # hubs and machines. Used along with `jupyter-syncthing-proxy`.
-  - jupyter-syncthing-proxy==1.0.3
-  - syncthing~=1.22.1
+  - jupyter-syncthing-proxy>=1.0
+  - syncthing~=1.22
   # gh-scoped-creds allows users to securely push to GitHub from their repo.
   # https://blog.jupyter.org/securely-pushing-to-github-from-a-jupyterhub-3ee42dfdc54f has
   # some more information
-  - gh-scoped-creds==4.1
+  - gh-scoped-creds>=4.1
   # More git tools from github-cli
-  - gh~=2.32.1
+  - gh
 
   # VS Code support
-  - jupyter-vscode-proxy~=0.5
-  - code-server~=4.23
+  - jupyter-vscode-proxy
+  - code-server
 
   # Jupyter tools
   - ipython~=8.17
-  - ipywidgets~=8.1.1
-  - jupyter-ai~=2.20
+  - ipywidgets~=8.1
+  - jupyter-ai~=2.31
   # - jupyter-collaboration~=2.0.1
-  - jupyter-offlinenotebook~=0.3.1
+  - jupyter-offlinenotebook~=0.3
   # Access linux desktop from inside JupyterHub
-  - jupyter-remote-desktop-proxy>=3.0.1
+  - jupyter-remote-desktop-proxy>=3.0
   - jupyter-sshd-proxy~=0.2
-  - jupyterlab-favorites~=3.2.1
-  - jupyterlab-geojson~=3.4.0
-  - jupyterlab-git~=0.50.0
-  - jupyterlab-h5web~=11.1.0
-  - jupyterlab-myst~=2.4.2
-  - jupyterlab_pygments~=0.3.0 # To bring extension up-to-date
-  # - jupytergis>=0.5.0
-  - jupytext~=1.17.0
-  - nbdime~=4.0.1
+  - jupyterlab-favorites~=3.2
+  - jupyterlab-geojson~=3.4
+  - jupyterlab-git~=0.50
+  - jupyterlab-h5web~=11.1
+  - jupyterlab-myst~=2.4
+  - jupyterlab_pygments~=0.3 # To bring extension up-to-date
+  - jupytergis>=0.5
+  - jupytext~=1.17
+  - nbdime~=4.0
   # JupyterBook Addons
-  - sphinx~=7.3
+  - sphinx
   - sphinxcontrib-bibtex
   # Interactive apps
   - itables~=2.1
   - voila~=0.5
 
   # Core scientific python stack
-  - cython~=3.0.10 # optimization, C API access
-  - flox~=0.9.7 # optimization, xarray operations
-  - hypothesis==6.58.0 # needed by numpy testing tools
-  - networkx==2.8.8
-  - numba~=0.60.0 # high-performance numerics
-  - numpy==1.26.4
+  - cython~=3.0 # optimization, C API access
+  - flox>=0.10 # optimization, xarray operations
+  - hypothesis>=6.58 # needed by numpy testing tools
+  - networkx>=3.6.1
+  - numba>=0.63.0 # high-performance numerics
+  - numpy>=1.26
   - pandas>=2.0.1,<3.0
-  - scikit-image~=0.24.0
+  - scikit-image>=0.25.2
   - scikit-learn>=1.2.2,<2.0.0
   - scipy>=1.10
-  - statsmodels==0.13.5
+  - statsmodels>=0.14.6
   - sympy~=1.12
   - xarray>=2025.03.0
 
   # Visualization packages
-  - bokeh~=3.2.2
-  - cartopy~=0.23.0 # geospatial plotting with matplotlib
+  - bokeh~=3.8
+  - cartopy>=0.24.0 # geospatial plotting with matplotlib
   - geemap~=0.32
-  - geoviews~=1.10.1
-  - hvplot~=0.10.0
-  - ipyleaflet~=0.19.2
-  - ipympl~=0.9.3 # This enables matplotlib interaction with jupyter widgets
+  - geoviews~=1.15
+  - hvplot~=0.10
+  - ipyleaflet~=0.19
+  - ipympl~=0.9 # This enables matplotlib interaction with jupyter widgets
   - leafmap~=0.36
   - lonboard~=0.9
-  - matplotlib~=3.9.0
-  - plotly~=5.18.0
-  - seaborn~=0.13.2 # statistical plotting with matplotlib
+  - matplotlib>=3.10.0
+  - plotly~=5.18
+  - seaborn~=0.13 # statistical plotting with matplotlib
 
   # Machine Learning packages
-  - py-xgboost~=2.1.1=cpu*
+  - py-xgboost~=2.1=cpu*
 
   # Geospatial data packages
   - geopandas>=0.14.4
@@ -95,55 +95,56 @@ dependencies:
 
   # File formats and file management, download, dataset caching
   - h5py~=3.11
-  - h5netcdf~=1.3.0
+  - h5netcdf~=1.3
   - nco~=5.1.6
-  - pooch~=1.8.0
+  - pooch~=1.8
   - zarr~=2.18
   - kerchunk~=0.2
 
   # Cloud access tools and libraries
-  - awscli~=2.17
+  - awscli~=2.25
   - boto3
   - s3fs>=2023.6.0
   # handle login and similar details for accessing earthdata protected data
   # https://github.com/nsidc/earthaccess
-  - earthaccess~=0.10.0
+  - earthaccess>=0.15.1
   # Access datasets exposed via STAC
-  - pystac-client~=0.8.3
-  - stackstac~=0.5.1
+  - pystac-client~=0.8
+  - stackstac~=0.5
   # Access datasets exposed via intake catalogs
-  - intake==0.6.6
-  - intake-esm>=2023.7.7
-  - intake-stac==0.4.0
-  - intake-xarray==0.6.1
+  - intake>=2.0
+  - intake-esm>=2025.7.9
+  - intake-stac>=0.4
+  - intake-xarray>=2.0
   - gcsfs>=2023.5.0
 
   # Distributed computing
-  - dask>=2023.12.1
-  - dask-labextension~=7.0.0
-  - dask-geopandas~=0.4.1
+  - dask>=2026.1.2
+  - dask-labextension~=7.0
+  - dask-geopandas~=0.4
 
   # Other useful generic python packages
   - pillow>=11.1.0 # Python imaging library, useful for many image-related tasks
-  - pytest~=8.3
-  - pytest-cov~=5.0
-  - pep8~=1.7
-  - flake8~=7.1
+  - pytest
+  - pytest-cov
+  - pep8
+  - flake8
   - tqdm~=4.66 # progress bars, with notebook support
 
   # Packages specific to climate work
-  - esmpy~=8.4.2
-  - xmip~=0.7.1
+  - esmpy~=8.4
+  - xmip~=0.7
 
   # Packages specific to cryo work
-  - h5coro~=0.0.6
-  - icepyx~=1.2.0
-  - itslive~=0.3.2
-  - is2view~=0.0.8
+  - h5coro~=1.0
+  - icepyx~=1.2
+  - itslive~=0.3
+  - is2view~=0.1
   - sliderule~=4.5
   - snowexsql~=0.5
 
   # Packages specific to technical publishing
+  - jupyter-book~=2.1
   - mystmd>=1.3.26
 
   # Desktop tools whose versions are more recent on conda-forge than ubuntu
@@ -159,8 +160,6 @@ dependencies:
   - git>=2.39
 
   # Not all packages will be available from conda-forge, we install from pip when we need to.
-  - pip~=25.0.0
-  - pip:
-      # For JupyterBook
-      - jinja-markdown==1.210911
-      - jupyter-book>=2.0.0b3
+  - pip~=25.0
+  # - pip:
+  #     - <package-name>
