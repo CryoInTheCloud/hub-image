@@ -76,7 +76,7 @@ tree
 #fzf   # fuzzy file finder
 
 ## This section adds tools for desktop environment usage
-chromium-browser
+chromium
 dbus-x11
 firefox
 tigervnc-standalone-server
@@ -102,7 +102,7 @@ qgit
 meld
 
 # Needed for qgis maybe? https://github.com/conda-forge/pygridgen-feedstock/issues/10
-libgl1-mesa-glx
+libgl1
 
 # Needed for jupyter-sshd-proxy
 openssh-server
