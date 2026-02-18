@@ -119,7 +119,7 @@ dependencies:
   - gcsfs>=2023.5.0
 
   # Distributed computing
-  - dask>=2026.1.2
+  - dask>=2024.12.1
   - dask-labextension~=7.0
   - dask-geopandas~=0.4
 
