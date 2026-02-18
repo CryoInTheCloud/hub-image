@@ -137,7 +137,7 @@ dependencies:
 
   # Packages specific to cryo work
   - h5coro~=1.0
-  - icepyx~=1.2
+  - icepyx>=2.0
   - itslive~=0.3
   - is2view~=0.1
   - sliderule~=4.5
