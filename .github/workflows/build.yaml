@@ -17,38 +17,63 @@ permissions: {}
 
 jobs:
   build-and-push:
+    env:
+      REGISTRY: quay.io
+      PACKAGE: cryo-hub-image
     runs-on: ubuntu-latest
     steps:
-
-    # For biggish images, github actions runs out of disk space.
-    # So we cleanup some unwanted things in the disk image, and reclaim that space for our docker use
-    # https://github.com/actions/virtual-environments/issues/2606#issuecomment-772683150
-    # and https://github.com/easimon/maximize-build-space/blob/b4d02c14493a9653fe7af06cc89ca5298071c66e/action.yml#L104
-    # This gives us a total of about 52G of free space, which should be enough for now
-    - name: cleanup disk space
-      run: |
-        sudo rm -rf /usr/local/lib/android /usr/share/dotnet /opt/ghc
-        df -h
 
     - name: Checkout files in repo
       uses: actions/checkout@v6
       with:
         persist-credentials: false
 
-    - name: Build and push the image to quay.io
-      uses: jupyterhub/repo2docker-action@master
+    - name: Repository metadata
+      uses: docker/metadata-action@v6
       with:
-        # Make sure username & password/token pair matches your registry credentials
-        DOCKER_USERNAME: ${{ secrets.QUAY_USERNAME }}
-        DOCKER_PASSWORD: ${{ secrets.QUAY_PASSWORD }}
-        DOCKER_REGISTRY: "quay.io"
-        # Disable pushing a 'latest' tag, as this often just causes confusion
-        LATEST_TAG_OFF: true
-        IMAGE_NAME: "cryointhecloud/cryo-hub-image"
-        # Put repo contents in /srv/repo, so they aren't mangled when we put user home in /home/jovyan
-        REPO_DIR: /srv/repo
-        # Fix man pages that are disabled by Ubuntu 18 minimal base image
-        APPENDIX_FILE: "appendix"
+        images: |
+          ${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ env.PACKAGE }}
+        tags: |
+          type=sha,prefix=
+
+    # - name: Authenticate with distribution registry
+    #   uses: docker/login-action@v4
+    #   with:
+    #     registry: ${{ env.REGISTRY }}
+    #     username: ${{ secrets.QUAY_USERNAME }}
+    #     password: ${{ secrets.QUAY_PASSWORD }}
+
+    - name: Authenticate with cache registry
+      uses: docker/login-action@v4
+      with:
+        registry: ghcr.io
+        username: ${{ github.repository_owner }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Setup docker buildx
+      uses: docker/setup-buildx-action@v4
+
+    - name: Setup python
+      uses: actions/setup-python@v6
+      with:
+        cache: pip
+        pip-install: jupyter-repo2docker
+
+    - name: Run repo2docker
+      env:
+        CACHE: ghcr.io/${{ github.repository_owner }}/${{ env.PACKAGE }}-cache:latest
+      run: >
+        jupyter-repo2docker
+        --no-run
+        --user-id 1000
+        --user-name jovyan
+        --target-repo-dir /srv/repo
+        --appendix "$(< appendix)"
+        --image-name "$DOCKER_METADATA_OUTPUT_TAGS"
+        --DockerEngine.extra_buildx_build_args=--cache-from="type=registry,ref=$CACHE"
+        --DockerEngine.extra_buildx_build_args=--cache-to="type=registry,ref=$CACHE,mode=max"
+        $LABELS
+        .
 
     # Lets us monitor disks getting full as images get bigger over time
     - name: Show how much disk space is left
