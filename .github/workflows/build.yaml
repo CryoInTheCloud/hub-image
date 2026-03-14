@@ -1,4 +1,4 @@
-name: Build and push container image
+name: Test or publish container image
 
 on:
   push:
@@ -57,12 +57,8 @@ jobs:
     - name: Setup docker buildx
       uses: docker/setup-buildx-action@v4
 
-    - name: Setup python
-      uses: actions/setup-python@v6
-      with:
-        python-version: '3.13'
-        cache: pip
-        pip-install: jupyter-repo2docker
+    - name: Install repo2docker
+      run: pip install jupyter-repo2docker
 
     - name: Run repo2docker
       env:
