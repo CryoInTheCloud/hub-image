@@ -15,13 +15,13 @@ on:
   pull_request:
     paths: *paths
 
-permissions: {}
-
 jobs:
   build-and-push:
     env:
       PACKAGE: cryo-hub-image
       REGISTRY: quay.io
+    permissions:
+      packages: write
     runs-on: ubuntu-latest
     steps:
 
