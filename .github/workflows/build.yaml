@@ -15,14 +15,17 @@ on:
   pull_request:
     paths: *paths
 
+permissions: {}
+
 jobs:
   build-and-push:
     env:
       PACKAGE: cryo-hub-image
       REGISTRY: quay.io
     permissions:
-      packages: write
+      packages: write  # needed to upload and publish docker image to GitHub Packages
     runs-on: ubuntu-latest
+    environment: container
     steps:
 
     - name: Checkout files in repo
@@ -83,7 +86,7 @@ jobs:
         --user-name jovyan
         --target-repo-dir /srv/repo
         --appendix "$(< appendix)"
-        --image-name ${{ steps.image.outputs.tags }}
+        --image-name ${STEPS_IMAGE_OUTPUTS_TAGS}
         --DockerEngine.extra_buildx_build_args=--cache-from="type=registry,ref=${STEPS_CACHE_OUTPUTS_TAGS}"
         --DockerEngine.extra_buildx_build_args=--cache-to="type=registry,ref=${STEPS_CACHE_OUTPUTS_TAGS},mode=max"
         .
