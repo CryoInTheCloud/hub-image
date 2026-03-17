@@ -5,7 +5,7 @@ channels:
   - nodefaults
 
 dependencies:
-  - python~=3.12.0
+  - python=3.12
   # Required until https://github.com/jupyterhub/repo2docker/pull/1196 is merged
   - jupyterhub-singleuser~=4.0
   # nbgitpuller is very helpful when distributing user content
