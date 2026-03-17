@@ -73,6 +73,8 @@ jobs:
     - name: Run repo2docker
       env:
         PUSH_QUESTION: ${{ github.event_name == 'push' && '--push' || '--no-push' }}
+        STEPS_CACHE_OUTPUTS_TAGS: ${{ steps.cache.outputs.tags }}
+        STEPS_IMAGE_OUTPUTS_TAGS: ${{ steps.image.outputs.tags }}
       run: >
         jupyter-repo2docker
         $PUSH_QUESTION
@@ -82,8 +84,8 @@ jobs:
         --target-repo-dir /srv/repo
         --appendix "$(< appendix)"
         --image-name ${{ steps.image.outputs.tags }}
-        --DockerEngine.extra_buildx_build_args=--cache-from="type=registry,ref=${{ steps.cache.outputs.tags }}"
-        --DockerEngine.extra_buildx_build_args=--cache-to="type=registry,ref=${{ steps.cache.outputs.tags }},mode=max"
+        --DockerEngine.extra_buildx_build_args=--cache-from="type=registry,ref=${STEPS_CACHE_OUTPUTS_TAGS}"
+        --DockerEngine.extra_buildx_build_args=--cache-to="type=registry,ref=${STEPS_CACHE_OUTPUTS_TAGS},mode=max"
         .
 
     # Lets us monitor disks getting full as images get bigger over time
