@@ -68,7 +68,7 @@ jobs:
       uses: docker/setup-buildx-action@v4
 
     - name: Install repo2docker
-      run: pip install jupyter-repo2docker
+      run: pip install git+https://github.com/jupyterhub/repo2docker.git@6b59fafc364a549d1709866b0c559d097a052010
 
     - name: Run repo2docker
       env:
