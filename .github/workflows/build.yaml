@@ -30,7 +30,7 @@ jobs:
       with:
         persist-credentials: false
 
-    - name: Repository metadata
+    - name: Image metadata
       id: image
       uses: docker/metadata-action@v6
       env:
@@ -41,7 +41,7 @@ jobs:
         tags: |
           type=sha,prefix=
 
-    - name: Repository metadata
+    - name: Cache metadata
       id: cache
       uses: docker/metadata-action@v6
       with:
@@ -81,9 +81,9 @@ jobs:
         --user-name jovyan
         --target-repo-dir /srv/repo
         --appendix "$(< appendix)"
-        --image-name ${{ steps.image.output.tags }}
-        --DockerEngine.extra_buildx_build_args=--cache-from="type=registry,ref=${{ steps.cache.output.tags }}"
-        --DockerEngine.extra_buildx_build_args=--cache-to="type=registry,ref=${{ steps.cache.output.tags }},mode=max"
+        --image-name ${{ steps.image.outputs.tags }}
+        --DockerEngine.extra_buildx_build_args=--cache-from="type=registry,ref=${{ steps.cache.outputs.tags }}"
+        --DockerEngine.extra_buildx_build_args=--cache-to="type=registry,ref=${{ steps.cache.outputs.tags }},mode=max"
         .
 
     # Lets us monitor disks getting full as images get bigger over time
