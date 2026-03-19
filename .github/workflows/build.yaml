@@ -57,9 +57,6 @@ jobs:
       - name: Install repo2docker
         run: pip install git+https://github.com/jupyterhub/repo2docker.git@6b59fafc364a549d1709866b0c559d097a052010
 
-      - name: Debug
-        run: git status
-        
       - name: Run repo2docker
         env:
           PUSH_QUESTION: ${{ github.event_name == 'push' && '--push' || '--no-push' }}
