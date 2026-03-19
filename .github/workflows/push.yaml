@@ -1,0 +1,20 @@
+name: Publish container image
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "apt.txt"
+      - "conda-linux-64.lock"
+      - "environment.yml"
+      - "start"
+      - "postBuild"
+      - ".github/workflows/build.yaml"  # rebuild if the build process changes
+
+permissions: {}  # prevent excessive permissions on workflow level
+
+jobs:
+  call:
+    uses: ./.github/workflows/build.yaml
+    secrets: inherit
