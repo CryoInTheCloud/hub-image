@@ -17,4 +17,6 @@ permissions: {}  # prevent excessive permissions on workflow level
 jobs:
   call:
     uses: ./.github/workflows/build.yaml
+    permissions:
+      packages: write  # needed to upload and publish cache to GitHub Packages
     secrets: inherit
