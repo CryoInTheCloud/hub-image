@@ -1,30 +1,18 @@
 name: Test or publish container image
 
 on:
-  push:
-    branches:
-      - main
-    paths: &paths
-      - "apt.txt"
-      - "conda-linux-64.lock"
-      - "environment.yml"
-      - "start"
-      - "postBuild"
-      - ".github/workflows/build.yaml"  # rebuild if the build process changes
-  pull_request:
-    paths: *paths
+  workflow_call:
 
 permissions: {}  # prevent excessive permissions on workflow level
 
 jobs:
-  build-and-push:
+  build:
     env:
       PACKAGE: cryo-hub-image
       REGISTRY: quay.io
     permissions:
-      packages: write  # needed to upload and publish docker image to GitHub Packages
+      packages: write  # needed to upload and publish cache to GitHub Packages
     runs-on: ubuntu-latest
-    environment: container
     steps:
 
       - name: Checkout files in repo
@@ -53,6 +41,7 @@ jobs:
             type=raw,value=latest
 
       - name: Authenticate with distribution registry
+        if: github.event_name == 'push'
         uses: docker/login-action@v4
         with:
           registry: ${{ env.REGISTRY }}
