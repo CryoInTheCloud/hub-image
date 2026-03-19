@@ -11,6 +11,3 @@ RUN mandb
 
 # Revert to default user
 USER ${NB_USER}
-
-# Overwrite NB environment with lockfile
-RUN ${MAMBA_EXE} env create --prefix ${NB_PYTHON_PREFIX} --yes --file "conda-lock.yml"
