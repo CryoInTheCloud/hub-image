@@ -10,8 +10,6 @@ jobs:
     env:
       PACKAGE: cryo-hub-image
       REGISTRY: quay.io
-    permissions:
-      packages: write  # needed to upload and publish cache to GitHub Packages
     runs-on: ubuntu-latest
     steps:
 
