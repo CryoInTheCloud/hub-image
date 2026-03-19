@@ -3,8 +3,6 @@ name: Test or publish container image
 on:
   workflow_call:
 
-permissions: {}  # prevent excessive permissions on workflow level
-
 jobs:
   build:
     env:
