@@ -74,7 +74,3 @@ jobs:
           --DockerEngine.extra_buildx_build_args=--cache-from="type=registry,ref=${STEPS_CACHE_OUTPUTS_TAGS}"
           --DockerEngine.extra_buildx_build_args=--cache-to="type=registry,ref=${STEPS_CACHE_OUTPUTS_TAGS},mode=max"
           .
-
-      # Lets us monitor disks getting full as images get bigger over time
-      - name: Show how much disk space is left
-        run: df -h
