@@ -37,12 +37,12 @@ jobs:
             type=raw,value=latest
 
       - name: Authenticate with distribution registry
-        if: github.event_name == 'push'
+        if: github.repository == 'CryoInTheCloud/hub-image' && github.event_name == 'push'
         uses: docker/login-action@v4
         with:
           registry: ${{ env.REGISTRY }}
-          username: ${{ secrets.QUAY_USERNAME }}
-          password: ${{ secrets.QUAY_PASSWORD }}
+          username: ${{ secrets.username }}
+          password: ${{ secrets.password }}
 
       - name: Authenticate with cache registry
         uses: docker/login-action@v4
