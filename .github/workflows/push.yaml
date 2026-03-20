@@ -19,4 +19,6 @@ jobs:
     uses: ./.github/workflows/build.yaml
     permissions:
       packages: write  # needed to upload and publish cache to GitHub Packages
-    secrets: inherit
+    secrets:
+      username: ${{ secrets.QUAY_USERNAME }}  
+      password: ${{ secrets.QUAY_PASSWORD }} 
