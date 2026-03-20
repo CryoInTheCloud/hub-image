@@ -17,8 +17,9 @@ permissions: {}  # prevent excessive permissions on workflow level
 jobs:
   call:
     uses: ./.github/workflows/build.yaml
+    environment: container
     permissions:
       packages: write  # needed to upload and publish cache to GitHub Packages
     secrets:
-      username: ${{ secrets.QUAY_USERNAME }}  
-      password: ${{ secrets.QUAY_PASSWORD }} 
+      username: ${{ secrets.QUAY_USERNAME }}
+      password: ${{ secrets.QUAY_PASSWORD }}
