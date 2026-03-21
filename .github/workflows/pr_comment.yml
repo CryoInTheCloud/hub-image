@@ -4,7 +4,8 @@ name: Pull Request comment
 on:
   pull_request:
     types: [opened, reopened]
-    paths: ["environment.yml"]
+    paths:
+      - environment-in.yml
 
 permissions: {}
 

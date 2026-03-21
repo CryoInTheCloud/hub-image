@@ -3,7 +3,8 @@ name: Conda Lock
 
 on:
   repository_dispatch:
-    types: [condalock-command]
+    types:
+      - condalock-command
 
 permissions: {}
 
