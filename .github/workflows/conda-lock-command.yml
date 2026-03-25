@@ -48,7 +48,6 @@ jobs:
         shell: micromamba-shell {0}
         run: |
           conda-lock lock --mamba --file environment.yml --platform linux-64
-          mv conda-lock.yml .binder/
 
       # Commit the change to the PR branch if any changes
       - name: Commit condalock files to PR
