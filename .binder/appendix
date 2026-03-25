@@ -14,4 +14,5 @@ USER ${NB_USER}
 
 # Overwrite NB environment with lockfile
 RUN ${MAMBA_EXE} env create --prefix ${NB_PYTHON_PREFIX} --yes --file "conda-lock.yml" \
- && ${MAMBA_EXE} list --prefix ${NB_PYTHON_PREFIX}
+ && ${MAMBA_EXE} list --prefix ${NB_PYTHON_PREFIX} \
+ && ${MAMBA_EXE} clean --all --force-pkgs-dirs --yes
