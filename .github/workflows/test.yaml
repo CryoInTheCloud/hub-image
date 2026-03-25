@@ -9,7 +9,7 @@ on:
       - "environment.yml"
       - "start"
       - "postBuild"
-      - ".github/workflows/build.yaml"  # rebuild if the build process changes
+      - ".github/workflows/build.yaml"  # rebuild if the build workflow changes
       - ".github/workflows/test.yaml"  # rebuild if this workflow changes
 
 permissions: {}  # prevent excessive permissions on workflow level

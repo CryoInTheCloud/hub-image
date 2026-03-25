@@ -11,7 +11,7 @@ on:
       - "environment.yml"
       - "start"
       - "postBuild"
-      - ".github/workflows/build.yaml"  # rebuild if the build process changes
+      - ".github/workflows/build.yaml"  # rebuild if the build workflow changes
       - ".github/workflows/push.yaml"  # rebuild if this workflow changes
 
 permissions: {}  # prevent excessive permissions on workflow level
@@ -19,9 +19,10 @@ permissions: {}  # prevent excessive permissions on workflow level
 jobs:
   call:
     uses: ./.github/workflows/build.yaml
-    environment: container
     permissions:
       packages: write  # needed to upload and publish cache to GitHub Packages
+    with:
+      environment: container
     secrets:
       username: ${{ secrets.QUAY_USERNAME }}
       password: ${{ secrets.QUAY_PASSWORD }}

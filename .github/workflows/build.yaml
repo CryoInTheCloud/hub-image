@@ -1,7 +1,16 @@
-name: Test or publish container image
+name: Build container image
 
 on:
   workflow_call:
+    inputs:
+      environment:
+        required: false
+        type: string
+    secrets:
+      username:
+        required: false
+      password:
+        required: false
 
 jobs:
   build:
@@ -9,6 +18,7 @@ jobs:
       PACKAGE: cryo-hub-image
       REGISTRY: quay.io
     runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
     steps:
 
       - name: Checkout files in repo
