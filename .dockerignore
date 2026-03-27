@@ -1,1 +1,8 @@
 .git
+.github
+.gitignore
+appendix
+conda-lock.yml
+environment.yml
+README.md
+LICENSE
