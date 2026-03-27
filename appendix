@@ -6,13 +6,13 @@ RUN yes | unminimize
 # $CONDA_PREFIX isn't available in this context.
 # NOTE: Prepending ensures a working path; if $MANPATH was previously empty,
 # the trailing colon ensures that system paths are searched.
-ENV MANPATH="${NB_PYTHON_PREFIX}/share/man:${MANPATH}"
+ENV MANPATH="${NB_PYTHON_PREFIX}/share/man${MANPATH:+:$MANPATH}"
 RUN mandb
 
 # Revert to default user
 USER ${NB_USER}
 
 # Overwrite NB environment with lockfile
-RUN ${MAMBA_EXE} env create --prefix ${NB_PYTHON_PREFIX} --yes --file "conda-lock.yml" \
+RUN ${MAMBA_EXE} env create --prefix ${NB_PYTHON_PREFIX} --yes --file "conda-linux-64.lock" \
  && ${MAMBA_EXE} list --prefix ${NB_PYTHON_PREFIX} \
  && ${MAMBA_EXE} clean --all --force-pkgs-dirs --yes

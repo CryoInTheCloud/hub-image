@@ -46,8 +46,7 @@ jobs:
       # Generate unified 'conda-lock.yml'
       - name: Run conda-lock
         shell: micromamba-shell {0}
-        run: |
-          conda-lock lock --mamba --file environment.yml --platform linux-64
+        run: conda-lock lock --mamba --kind lock --kind explicit --file environment.yml --platform linux-64
 
       # Commit the change to the PR branch if any changes
       - name: Commit condalock files to PR
