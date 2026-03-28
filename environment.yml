@@ -115,7 +115,7 @@ dependencies:
   - awscli~=2.25
   - boto3
   - s3fs>=2023.6.0
-  - earthaccess>=0.15.1
+  - earthaccess>=0.15.1  # handle login and similar details for accessing earthdata protected data
 
   # Access datasets exposed via STAC
   - pystac-client~=0.8

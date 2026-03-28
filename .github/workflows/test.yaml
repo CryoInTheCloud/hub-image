@@ -3,12 +3,16 @@ name: Test building container image
 on:
   pull_request:
     paths:
+      - ".binder/apt.txt"
+      - ".binder/environment.yml"
+      - ".binder/postBuild"
+      - ".binder/start"
+      - "mime"
       - "appendix"
-      - "apt.txt"
+      - "conda-linux-64.lock"
       - "conda-lock.yml"
-      - "environment.yml"
-      - "start"
-      - "postBuild"
+      - "custom_jupyter_server_config.json"
+      - "qgis.desktop"
       - ".github/workflows/build.yaml"  # rebuild if the build workflow changes
       - ".github/workflows/test.yaml"  # rebuild if this workflow changes
 

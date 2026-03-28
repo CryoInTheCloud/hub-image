@@ -1,4 +1,4 @@
-# Runs conda-lock against environment-in.yml for reproducible environments
+# Runs conda-lock against environment.yml for reproducible environments
 name: Conda Lock
 
 on:
@@ -43,7 +43,7 @@ jobs:
             mamba
           init-shell: none
 
-      # Generate unified 'conda-lock.yml'  and platform-specific lockfiles
+      # Generate unified 'conda-lock.yml' and platform-specific lockfiles
       - name: Run conda-lock
         shell: micromamba-shell {0}
         run: conda-lock lock --mamba --kind lock --kind explicit --file environment.yml --platform linux-64
