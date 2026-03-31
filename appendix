@@ -6,7 +6,7 @@ RUN yes | unminimize
 # $CONDA_PREFIX isn't available in this context.
 # NOTE: Prepending ensures a working path; if $MANPATH was previously empty,
 # the trailing colon ensures that system paths are searched.
-ENV MANPATH="${NB_PYTHON_PREFIX}/share/man${MANPATH:+:$MANPATH}"
+ENV MANPATH="${NB_PYTHON_PREFIX}/share/man:${MANPATH:+$MANPATH}"
 RUN mandb
 
 # Revert to default user
