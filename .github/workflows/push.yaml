@@ -5,16 +5,12 @@ on:
     branches:
       - main
     paths:
-      - ".binder/apt.txt"
-      - ".binder/environment.yml"
-      - ".binder/postBuild"
-      - ".binder/start"
-      - "mime"
       - "appendix"
       - "conda-linux-64.lock"
-      - "conda-lock.yml"
       - "custom_jupyter_server_config.json"
+      - "mime/**"
       - "qgis.desktop"
+      - ".binder/**"
       - ".github/workflows/build.yaml"  # rebuild if the build workflow changes
       - ".github/workflows/push.yaml"  # rebuild if this workflow changes
 
