@@ -1,0 +1,3 @@
+# here to fix the Python version repo2docker will choose
+dependencies:
+  - python=3.12
