@@ -40,7 +40,7 @@ dependencies:
   # Jupyter tools
   - ipython~=8.17
   - ipywidgets~=8.1
-  - jupyter-ai~=2.31
+  # - jupyter-ai~=2.31  # removed for locking problems 
   # - jupyter-collaboration~=2.0.1
   - jupyter-offlinenotebook~=0.3
 
@@ -88,7 +88,7 @@ dependencies:
   - hvplot~=0.10
   - ipyleaflet~=0.19
   - ipympl~=0.9 # This enables matplotlib interaction with jupyter widgets
-  - leafmap~=0.36
+  # - leafmap~=0.36  # removed for locking problems
   - lonboard~=0.9
   - matplotlib>=3.10.0
   - plotly~=5.18
