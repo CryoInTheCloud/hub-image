@@ -37,16 +37,14 @@ jobs:
         uses: mamba-org/setup-micromamba@add3a49764cedee8ee24e82dfde87f5bc2914462 # v2.0.7
         with:
           environment-name: conda-lock-env
-          create-args: >-
-            python=3.12
-            conda-lock
-            mamba
+          create-args: conda-lock
           init-shell: none
+          cache-downloads-key: micromamba-downloads
 
       # Generate unified 'conda-lock.yml' and platform-specific lockfiles
       - name: Run conda-lock
         shell: micromamba-shell {0}
-        run: conda-lock lock --mamba --kind lock --kind explicit --file environment.yml --platform linux-64
+        run: conda-lock lock --kind lock --kind explicit --file environment.yml --platform linux-64
 
       # Commit the change to the PR branch if any changes
       - name: Commit condalock files to PR
