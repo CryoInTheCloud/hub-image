@@ -147,7 +147,7 @@ dependencies:
 
   # Packages specific to cryo work
   - h5coro>=1.0
-  - icepyx  # DEBUG: appears to break locking with the >=2.0 constraint
+  - icepyx>=2.0  # DEBUG: appears to break locking with the >=2.0 constraint
   - itslive>=0.3
   - is2view>=0.1
   - sliderule>=4.5
