@@ -44,7 +44,7 @@ jobs:
       # Generate unified 'conda-lock.yml' and platform-specific lockfiles
       - name: Run conda-lock
         shell: micromamba-shell {0}
-        run: conda-lock lock --kind lock --kind explicit --file environment.yml --platform linux-64
+        run: conda-lock --kind lock --kind explicit --file environment.yml --platform linux-64 --without-cuda
 
       # Commit the change to the PR branch if any changes
       - name: Commit condalock files to PR

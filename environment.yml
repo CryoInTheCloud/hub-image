@@ -8,7 +8,7 @@ dependencies:
   - python=3.12 # if changing, also change in .binder/environment.yml
 
   # Required until https://github.com/jupyterhub/repo2docker/pull/1196 is merged
-  - jupyterhub-singleuser>=4.0
+  - jupyterhub-singleuser~=4.0
 
   # nbgitpuller is very helpful when distributing user content
   - nbgitpuller>=1.2
@@ -23,7 +23,7 @@ dependencies:
   # https://syncthing.net/ provides a dropbox-like interface for syncing directories across users,
   # hubs and machines. Used along with `jupyter-syncthing-proxy`.
   - jupyter-syncthing-proxy>=1.0
-  - syncthing>=1.22
+  - syncthing~=1.22
 
   # gh-scoped-creds allows users to securely push to GitHub from their repo.
   # https://blog.jupyter.org/securely-pushing-to-github-from-a-jupyterhub-3ee42dfdc54f has
@@ -38,10 +38,10 @@ dependencies:
   - code-server
 
   # Jupyter tools
-  - ipython>=8.17
+  - ipython~=8.17
   - ipywidgets>=8.1
-  - jupyter-ai>=2.31
-  # - jupyter-collaboration>=2.0.1
+  - jupyter-ai~=2.31
+  # - jupyter-collaboration~=2.0.1
   - jupyter-offlinenotebook>=0.3
 
   # Access linux desktop from inside JupyterHub
@@ -50,7 +50,7 @@ dependencies:
   - jupyterlab-favorites>=3.2
   - jupyterlab-geojson>=3.4
   - jupyterlab-git>=0.50
-  - jupyterlab-h5web>=11.1
+  - jupyterlab-h5web~=11.1
   - jupyterlab-myst>=2.4
   - jupyterlab_pygments>=0.3 # To bring extension up-to-date
   - jupytergis>=0.5
@@ -72,13 +72,13 @@ dependencies:
   - networkx>=3.6.1
   - numba>=0.63.0 # high-performance numerics
   - numpy>=1.26
-  - pandas>=2.0.1
+  - pandas>=2.0.1,<3.0
   - scikit-image>=0.25.2
   - scikit-learn>=1.2.2
   - scipy>=1.10
   - statsmodels>=0.14.6
   - sympy>=1.12
-  - xarray>=2025.03.0
+  - xarray>=2026.02.0
 
   # Visualization packages
   - bokeh>=3.8
@@ -91,11 +91,11 @@ dependencies:
   - leafmap>=0.36
   - lonboard>=0.9
   - matplotlib>=3.10.0
-  - plotly>=5.18
+  - plotly~=5.18
   - seaborn>=0.13 # statistical plotting with matplotlib
 
   # Machine Learning packages
-  - py-xgboost>=2.1
+  - py-xgboost~=2.1
 
   # Geospatial data packages
   - geopandas>=0.14.4
@@ -104,11 +104,12 @@ dependencies:
   - rioxarray>=0.19.0
 
   # File formats and file management, download, dataset caching
+  - harmony-py>=1.3.4
   - h5py>=3.11
   - h5netcdf>=1.3
   - nco>=5.1.6
   - pooch>=1.8
-  - zarr>=2.18
+  - zarr~=2.18
   - kerchunk>=0.2
 
   # Cloud access tools and libraries
@@ -119,7 +120,7 @@ dependencies:
 
   # Access datasets exposed via STAC
   - pystac-client>=0.8
-  - stackstac>=0.5
+  - stackstac~=0.5
 
   # Access datasets exposed via intake catalogs
   - intake>=2.0
@@ -134,7 +135,7 @@ dependencies:
   - dask-geopandas>=0.4
 
   # Other useful generic python packages
-  - pillow>=11.1.0 # Python imaging library, useful for many image-related tasks
+  - pillow>=11.1.0,<12 # Python imaging library, useful for many image-related tasks
   - pytest
   - pytest-cov
   - pep8
@@ -147,18 +148,18 @@ dependencies:
 
   # Packages specific to cryo work
   - h5coro>=1.0
-  - icepyx>=2.0  # DEBUG: appears to break locking with the >=2.0 constraint
+  - icepyx>=2.0
   - itslive>=0.3
   - is2view>=0.1
-  - sliderule>=4.5
+  - sliderule~=4.5
   - snowexsql>=0.5
 
   # Packages specific to technical publishing
   - jupyter-book>=2.1
   - mystmd>=1.3.26
 
-  # # Desktop tools whose versions are more recent on conda-forge than ubuntu
-  # - qgis>=3.40.0  # DEBUG: slows down locking a lot, so removed while debugging icepyx
+  # Desktop tools whose versions are more recent on conda-forge than ubuntu
+  - qgis>=3.40.0
 
   # Uncertain utility, but ...
   - pyopencl  # see https://github.com/conda-forge/qgis-feedstock/issues/263
