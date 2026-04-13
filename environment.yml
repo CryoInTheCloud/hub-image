@@ -42,7 +42,7 @@ dependencies:
   - ipywidgets>=8.1
   - jupyter-ai~=2.31
   # - jupyter-collaboration~=2.0.1
-  - jupyter-offlinenotebook>=0.3
+  - jupyter-offlinenotebook>=0.3.2
 
   # Access linux desktop from inside JupyterHub
   - jupyter-remote-desktop-proxy>=3.0
