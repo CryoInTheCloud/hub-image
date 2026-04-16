@@ -135,7 +135,7 @@ dependencies:
   - dask-geopandas>=0.4
 
   # Other useful generic python packages
-  - pillow>=11.1.0,<12 # Python imaging library, useful for many image-related tasks
+  - pillow>=11.1.0  # Python imaging library, useful for many image-related tasks
   - pytest
   - pytest-cov
   - pep8
