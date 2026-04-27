@@ -5,7 +5,7 @@ channels:
   - nodefaults
 
 dependencies:
-  - python=3.12 # if changing, also change in .binder/environment.yml
+  - python=3.13 # if changing, also change in .binder/environment.yml
 
   # Required until https://github.com/jupyterhub/repo2docker/pull/1196 is merged
   - jupyterhub-singleuser~=4.0
