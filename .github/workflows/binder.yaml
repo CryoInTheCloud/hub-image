@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   binder:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     steps:
     - name: comment on PR with Binder link
       uses: actions/github-script@v8
