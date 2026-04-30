@@ -55,6 +55,8 @@ jobs:
 
       # Commit the change to the PR branch if any changes
       - name: Commit condalock files to PR
+        env:
+            GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
         run: |
           if [[ $(git ls-files --modified) ]]; then
             git config --global user.name 'actions-bot'
