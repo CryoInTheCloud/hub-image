@@ -48,14 +48,14 @@ jobs:
 
       - name: Authenticate with distribution registry
         if: github.repository == 'CryoInTheCloud/hub-image' && github.event_name == 'push'
-        uses: docker/login-action@v4
+        uses: docker/login-action@4907a6ddec9925e35a0a9e82d7399ccc52663121 # v4.1.0
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ secrets.username }}
           password: ${{ secrets.password }}
 
       - name: Authenticate with cache registry
-        uses: docker/login-action@v4
+        uses: docker/login-action@4907a6ddec9925e35a0a9e82d7399ccc52663121 # v4.1.0
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
