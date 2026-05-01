@@ -11,9 +11,9 @@ permissions: {}
 jobs:
   condalock:
     permissions:
-      contents: write  # for git push
+      contents: write # for git push
     runs-on: ubuntu-latest
-    timeout-minutes: 360
+    timeout-minutes: 60 # github-app token expires after 1hr - https://github.com/CryoInTheCloud/hub-image/issues/157
 
     steps:
       # Generate token from CryoInTheCloud bot
