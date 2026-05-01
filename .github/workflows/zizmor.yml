@@ -5,11 +5,12 @@ on:
     branches:
       - "main"
     paths:
+      - ".github/dependabot.yml"
       - ".github/workflows/*"
   pull_request:
     paths:
+      - ".github/dependabot.yml"
       - ".github/workflows/*"
-
 
 permissions: {}
 
