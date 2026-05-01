@@ -53,7 +53,7 @@ dependencies:
   - jupyterlab-h5web~=11.1
   - jupyterlab-myst>=2.4
   - jupyterlab_pygments>=0.3 # To bring extension up-to-date
-  - jupytergis>=0.5
+  - jupytergis>=0.15.0
   - jupytext>=1.17
   - nbdime>=4.0
 
