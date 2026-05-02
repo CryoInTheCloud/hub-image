@@ -64,4 +64,4 @@ jobs:
           token: ${{ steps.app-token.outputs.token }}
           repository: ${{ github.event.client_payload.github.payload.repository.full_name }}
           comment-id: ${{ github.event.client_payload.github.payload.comment.id }}
-          reaction-type: hooray
+          reactions: hooray
