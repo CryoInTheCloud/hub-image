@@ -7,8 +7,7 @@ on:
     paths:
       - environment.yml
 
-permissions:
-  contents: read
+permissions: {}
 
 jobs:
   CallCondaLock:
