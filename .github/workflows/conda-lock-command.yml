@@ -13,6 +13,9 @@ jobs:
     permissions:
       contents: write # for git push
     runs-on: ubuntu-latest
+    environment:
+      name: slash-ops
+      deployment: false
 
     steps:
       # Checkout the pull request branch
