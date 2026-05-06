@@ -66,7 +66,7 @@ dependencies:
   - voila>=0.5
 
   # Core scientific python stack
-  - cython>=3.0 # optimization, C API access
+  - cython>=3.2.4 # optimization, C API access
   - flox>=0.10 # optimization, xarray operations
   - hypothesis>=6.58 # needed by numpy testing tools
   - networkx>=3.6.1
