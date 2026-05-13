@@ -6,11 +6,15 @@ on:
       environment:
         required: false
         type: string
+      ref:
+        required: false
+        type: string
     secrets:
       username:
         required: false
       password:
         required: false
+      
 
 jobs:
   build:
@@ -24,7 +28,12 @@ jobs:
       - name: Checkout files in repo
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
+          ref: ${{ inputs.ref || github.ref }}
           persist-credentials: false
+
+      - name: Confirm updated conda-linux-64.lock
+        run: |
+          echo "TODO: compare environment.yml hash with value in conda lock output."
 
       - name: Image metadata
         id: image

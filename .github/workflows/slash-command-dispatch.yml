@@ -6,8 +6,7 @@ on:
       - created
       # - edited  # add for test purposes, otherwise avoid to prevent processing unnecessary events
 
-permissions:  # added using https://github.com/step-security/secure-workflows
-  contents: read
+permissions: {}
 
 jobs:
   slashCommandDispatch:
