@@ -5,7 +5,7 @@ channels:
   - nodefaults
 
 dependencies:
-  - python=3.12 # if changing, also change in .binder/environment.yml
+  - python=3.13 # if changing, also change in .binder/environment.yml
 
   # Required until https://github.com/jupyterhub/repo2docker/pull/1196 is merged
   - jupyterhub-singleuser~=5.0
@@ -159,7 +159,7 @@ dependencies:
   - mystmd>=1.3.26
 
   # Desktop tools whose versions are more recent on conda-forge than ubuntu
-  - qgis>=3.40.0
+  # - qgis>=3.40.0
 
   # Uncertain utility, but ...
   - pyopencl  # see https://github.com/conda-forge/qgis-feedstock/issues/263
