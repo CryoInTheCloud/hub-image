@@ -26,7 +26,7 @@ repository. Follow these steps:
    [mybinder.org](https://mybinder.org) where you can test your pull request to make sure it works
    as you would expect.
 3. In the Pull Request, write a comment with the slash command `/condalock`.
-   This will refresh the [`conda-lock.yml`](https://conda-incubator.github.io/conda-lock/output/#unified-lockfile)
+   This will refresh the [`conda-lock.yml`](https://conda.github.io/conda-lock/output/#unified-lockfile)
    file that contains a snapshot of the exact library versions contained in the
    conda environment, which will be useful for reproducibility.
 4. If the bot does not commit any changes to update the `conda-lock.yml` file in your PR, you can check the
