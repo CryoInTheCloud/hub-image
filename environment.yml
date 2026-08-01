@@ -144,7 +144,7 @@ dependencies:
 
   # Packages specific to climate work
   - esmpy>=8.4
-  - xmip>=0.7
+  - xmip>=0.7.2
 
   # Packages specific to cryo work
   - h5coro>=1.0
