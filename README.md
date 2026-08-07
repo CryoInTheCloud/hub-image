@@ -7,7 +7,7 @@ The JupyterHub docker image used for [hub.cryointhecloud.com](https://cryointhec
 hosted on https://quay.io/repository/cryointhecloud/cryo-hub-image
 
 The image is built with [repo2docker](https://repo2docker.readthedocs.io), which uses
-Ubuntu Bionic Beaver (18.04) as the base image. If you'd like to run a test build
+Ubuntu Noble Numbat (24.04) as the base image. If you'd like to run a test build
 locally, please read the [repo2docker Getting Started
 doc](https://repo2docker.readthedocs.io/en/latest/getting-started/index.html) and the
 [repo2docker Configuration Files
