@@ -110,7 +110,7 @@ dependencies:
   - nco>=5.1.6
   - pooch>=1.8
   - zarr~=2.18
-  - kerchunk>=0.2
+  - kerchunk>=0.2.10
 
   # Cloud access tools and libraries
   - awscli>=2.25
