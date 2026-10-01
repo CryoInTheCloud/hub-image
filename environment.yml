@@ -49,7 +49,7 @@ dependencies:
   - jupyter-sshd-proxy>=0.2
   - jupyterlab-favorites>=3.2
   - jupyterlab-geojson>=3.4
-  - jupyterlab-git>=0.50
+  - jupyterlab-git>=0.54.1
   - jupyterlab-h5web~=11.1
   - jupyterlab-myst>=2.4
   - jupyterlab_pygments>=0.3 # To bring extension up-to-date
