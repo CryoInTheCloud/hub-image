@@ -13,7 +13,7 @@
 version: 1
 metadata:
   content_hash:
-    linux-64: 53f47300bddf2cf64b24cab1a1600faaa953f9e3c8dbc1195d5c1b057e68cd07
+    linux-64: 1c8e916b5e7917a74827ed4369dd6007f7dd88ca69ee5f7477fd8a8d70726c4d
   channels:
   - url: conda-forge
     used_env_vars: []
@@ -363,18 +363,6 @@ package:
   hash:
     md5: 85c4f19f377424eafc4ed7911b291642
     sha256: 792da8131b1b53ff667bd6fc617ea9087b570305ccb9913deb36b8e12b3b5141
-  category: main
-  optional: false
-- name: asciitree
-  version: 0.3.3
-  manager: conda
-  platform: linux-64
-  dependencies:
-    python: ''
-  url: https://conda.anaconda.org/conda-forge/noarch/asciitree-0.3.3-py_2.tar.bz2
-  hash:
-    md5: c0481c9de49f040272556e2cedf42816
-    sha256: b3e9369529fe7d721b66f18680ff4b561e20dbf6507e209e1f60eac277c97560
   category: main
   optional: false
 - name: assimp
@@ -1934,6 +1922,19 @@ package:
     sha256: 3fcbb397f02bdddafeb117bb3ae0d3be7c01ba1734326b6665dca2a179d649b5
   category: main
   optional: false
+- name: donfig
+  version: 0.8.1.post1
+  manager: conda
+  platform: linux-64
+  dependencies:
+    python: '>=3.9'
+    pyyaml: ''
+  url: https://conda.anaconda.org/conda-forge/noarch/donfig-0.8.1.post1-pyhd8ed1ab_1.conda
+  hash:
+    md5: c56a7fa5597ad78b62e1f5d21f7f8b8f
+    sha256: d58e97d418f71703e822c422af5b9c431e3621a0ecdc8b0334c1ca33e076dfe7
+  category: main
+  optional: false
 - name: double-conversion
   version: 3.4.0
   manager: conda
@@ -2183,18 +2184,6 @@ package:
   hash:
     md5: be9fa5e3ffe88b61d0dda49b0e0fe2ab
     sha256: c8b0d8613851a4067c8f226a9b432888dee94154a7e80f09d88d7ca8da8bbf9a
-  category: main
-  optional: false
-- name: fasteners
-  version: '0.20'
-  manager: conda
-  platform: linux-64
-  dependencies:
-    python: '>=3.9'
-  url: https://conda.anaconda.org/conda-forge/noarch/fasteners-0.20-pyhd8ed1ab_0.conda
-  hash:
-    md5: 11445cf1b9a9114b82a7dc9f0cd036ec
-    sha256: dc8a5ae5f8c410a14ba762eb132b28a72dfebb674e3675fd5255d740e12f7383
   category: main
   optional: false
 - name: fastprogress
@@ -4099,7 +4088,7 @@ package:
   category: main
   optional: false
 - name: intake-esm
-  version: 2025.7.9
+  version: 2025.12.12
   manager: conda
   platform: linux-64
   dependencies:
@@ -4109,19 +4098,20 @@ package:
     fsspec: '>=2024.12'
     intake: '>=2.0.0'
     itables: ''
+    kerchunk: '>=0.2.9'
     netcdf4: '>=1.5.5'
     pandas: '>=2.1.0'
-    polars: '>=1.24.0'
+    polars: '>=1.24.0,<1.33.0'
     pydantic: '>=2.0'
     pydap: '!=3.5.5'
-    python: '>=3.10'
+    python: '>=3.11'
     requests: '>=2.24.0'
     xarray: '>=2024.10'
-    zarr: '>=2.12'
-  url: https://conda.anaconda.org/conda-forge/noarch/intake-esm-2025.7.9-pyhd8ed1ab_0.conda
+    zarr: '!=3.0.*,>=2.12'
+  url: https://conda.anaconda.org/conda-forge/noarch/intake-esm-2025.12.12-pyhd8ed1ab_0.conda
   hash:
-    md5: 17a35fce61d5d427a06925ac1b682013
-    sha256: f04fa01c1cf11675f40308943b7bc0b118b9cc5eb1bff844984a033d2b16dedf
+    md5: 51f07f9ce314c7cf35417371408ea78f
+    sha256: 1bca0522f380e6baa0458b4583e6fbbe1c28eda8ffdd56ea5690a692b491b996
   category: main
   optional: false
 - name: intake-stac
@@ -5347,19 +5337,19 @@ package:
   category: main
   optional: false
 - name: kerchunk
-  version: 0.2.7
+  version: 0.2.10
   manager: conda
   platform: linux-64
   dependencies:
-    fsspec: ''
+    fsspec: '>=2025.2.0'
     numcodecs: ''
-    python: '>=3.9'
+    python: '>=3.11'
     ujson: ''
-    zarr: ''
-  url: https://conda.anaconda.org/conda-forge/noarch/kerchunk-0.2.7-pyhd8ed1ab_0.conda
+    zarr: '>=3.0.1'
+  url: https://conda.anaconda.org/conda-forge/noarch/kerchunk-0.2.10-pyhd8ed1ab_0.conda
   hash:
-    md5: 411253f16f2de8232c94483a46d2f08a
-    sha256: 624e14d7c4787ba683ebc80962d63054d9793267a93dbb1a501ad83c46046762
+    md5: 942b809ecbdbeb225e2e22592521f8e8
+    sha256: 9d8ed042bfde99c5c2c6c859fd0c9bce4137d42ea2033ce68aabd9c66564fbff
   category: main
   optional: false
 - name: keyutils
@@ -9561,6 +9551,21 @@ package:
     sha256: 0979bbb228ea5fc94ad2191cc92841ec6628a85b6c34d0b87f4a6e30fcb49f54
   category: main
   optional: false
+- name: msgspec
+  version: 0.22.0
+  manager: conda
+  platform: linux-64
+  dependencies:
+    __glibc: '>=2.17,<3.0.a0'
+    libgcc: '>=15'
+    python: '>=3.14,<3.15.0a0'
+    python_abi: 3.14.*
+  url: https://conda.anaconda.org/conda-forge/linux-64/msgspec-0.22.0-py314h89acca1_0.conda
+  hash:
+    md5: d0b947875606aa09cb40ee9900202b3b
+    sha256: fda009ec4e66e89e3db5160bf502a4652e0e93e9244f66e6e6ea385b9e960f0c
+  category: main
+  optional: false
 - name: multidict
   version: 7.2.1
   manager: conda
@@ -10055,23 +10060,21 @@ package:
   category: main
   optional: false
 - name: numcodecs
-  version: 0.15.2
+  version: 0.17.1
   manager: conda
   platform: linux-64
   dependencies:
     __glibc: '>=2.17,<3.0.a0'
-    deprecated: ''
-    libgcc: '>=14'
-    libstdcxx: '>=14'
+    libgcc: '>=15'
     msgpack-python: ''
-    numpy: '>=1.24,>=1.25,<3'
+    numpy: '>=1.25,<3,>=2.0'
     python: '>=3.14,<3.15.0a0'
     python_abi: 3.14.*
     typing_extensions: ''
-  url: https://conda.anaconda.org/conda-forge/linux-64/numcodecs-0.15.2-py314ha0b5721_0.conda
+  url: https://conda.anaconda.org/conda-forge/linux-64/numcodecs-0.17.1-py314h12ceea2_0.conda
   hash:
-    md5: e0f947fc4a2a9ab7f5b0d4df318c707b
-    sha256: 7f89fad1898ed5ad57cbb6401dd468ae7fa24c554f59f974b65fc7d6f01076e1
+    md5: 5647e2e4c93f692664ee6792c51d2f2c
+    sha256: f62ca3eb7179f1a08a63ce04b7ec968600cc24a870bb4b2c18d43490cdcfa693
   category: main
   optional: false
 - name: numexpr
@@ -10764,33 +10767,32 @@ package:
   category: main
   optional: false
 - name: polars
-  version: 2.1.0
+  version: 1.32.3
   manager: conda
   platform: linux-64
   dependencies:
-    polars-runtime-32: 2.1.0
-    python: '>=3.11'
-  url: https://conda.anaconda.org/conda-forge/noarch/polars-2.1.0-pyh3138b34_0.conda
+    polars-default: ==1.32.3
+  url: https://conda.anaconda.org/conda-forge/linux-64/polars-1.32.3-default_h3512890_0.conda
   hash:
-    md5: 3e2d5d685bbde2dce96887d79fa481e9
-    sha256: ebfa4ab7db111a512cbd858e41c01c6b318cd020f303c6af7e432fe4505022b2
+    md5: 43ff217be270dde3228f423f2d95c995
+    sha256: ced51411db31a8b403ef33c35dda78dd64bc169ba725c3ccf54ec3c6124bb381
   category: main
   optional: false
-- name: polars-runtime-32
-  version: 2.1.0
+- name: polars-default
+  version: 1.32.3
   manager: conda
   platform: linux-64
   dependencies:
     __glibc: '>=2.17,<3.0.a0'
     _python_abi3_support: 1.*
-    cpython: '>=3.11'
-    libgcc: '>=15'
-    libstdcxx: '>=15'
+    cpython: '>=3.9'
+    libgcc: '>=14'
+    libstdcxx: '>=14'
     python: ''
-  url: https://conda.anaconda.org/conda-forge/linux-64/polars-runtime-32-2.1.0-py311hb519a9e_0.conda
+  url: https://conda.anaconda.org/conda-forge/linux-64/polars-default-1.32.3-py39hf521cc8_0.conda
   hash:
-    md5: b61e4c5a066c86ddd692eab0027bb930
-    sha256: fd6f86e0de0bb26bc023eeb0d8fb0cd195324bc9553b5b261972fcb46a9d2834
+    md5: 396b65e7b176bb0345f164d30451f718
+    sha256: c3de83d052bf06e8df0d46928fe79b7d7e90885a9f1366b05b852db20e80dafa
   category: main
   optional: false
 - name: pooch
@@ -14713,7 +14715,7 @@ package:
   category: main
   optional: false
 - name: xarray
-  version: 2026.7.0
+  version: 2026.9.0
   manager: conda
   platform: linux-64
   dependencies:
@@ -14721,10 +14723,10 @@ package:
     packaging: '>=24.2'
     pandas: '>=2.2'
     python: '>=3.11'
-  url: https://conda.anaconda.org/conda-forge/noarch/xarray-2026.7.0-pyhc364b38_0.conda
+  url: https://conda.anaconda.org/conda-forge/noarch/xarray-2026.9.0-pyh5ded981_0.conda
   hash:
-    md5: f72531e6cf99c98d47306ec917f5e6b9
-    sha256: 47244c233aeb55de993fe79eebbbb2adc14b388bb0bf2f9dfbaa8aa6610b6345
+    md5: 5d0c655c6018bef6774fedb867cdc172
+    sha256: 17a75f06958d76439ae87435d594f6bc466b739ae6b9242c3c9e611b0643ddbe
   category: main
   optional: false
 - name: xcb-util
@@ -15281,19 +15283,22 @@ package:
   category: main
   optional: false
 - name: zarr
-  version: 2.18.7
+  version: 3.4.2
   manager: conda
   platform: linux-64
   dependencies:
-    asciitree: ''
-    fasteners: ''
-    numcodecs: '>=0.10.0,!=0.14.0,!=0.14.1,<0.16.0a0'
-    numpy: '>=1.24'
-    python: '>=3.11'
-  url: https://conda.anaconda.org/conda-forge/noarch/zarr-2.18.7-pyhd8ed1ab_0.conda
+    donfig: '>=0.8'
+    google-crc32c: '>=1.5'
+    msgspec: '>=0.19'
+    numcodecs: '>=0.16.6,!=0.17.0'
+    numpy: '>=2'
+    packaging: '>=22.0'
+    python: '>=3.12'
+    typing_extensions: '>=4.14'
+  url: https://conda.anaconda.org/conda-forge/noarch/zarr-3.4.2-pyhc364b38_0.conda
   hash:
-    md5: 209c3560e2eddfcb0bc769c659674dfa
-    sha256: 7f906b5a746aff5ee918fff815767848ae428f0d9cf4bd8e48640a3a759e4d01
+    md5: bfdcff73406499379cdfc1e9c9769c94
+    sha256: 69fe66c367849ec39ebf9c47aa329cb20c3488cbff572b287d2d609fc1bcdf61
   category: main
   optional: false
 - name: zeromq

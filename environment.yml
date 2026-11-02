@@ -109,7 +109,7 @@ dependencies:
   - h5netcdf>=1.3
   - nco>=5.1.6
   - pooch>=1.8
-  - zarr~=2.18
+  - zarr~=3.4
   - kerchunk>=0.2
 
   # Cloud access tools and libraries
